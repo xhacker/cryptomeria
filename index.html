@@ -7,11 +7,14 @@
 <script src="jquery.min.js"></script>
 <script>
 $(document).ready(function() {
-    _l1 = "a|i|u|e|o|ha|hi|fu|he|ho|ka|ki|ku|ke|ko|ma|mi|mu|me|mo|na|ni|nu|ne|no|ra|ri|ru|re|ro|sa|shi|su|se|so|ta|chi|tsu|te|to|ya|yu|yo|wa|o (wo)|n/m";
-    _h1 = "あ|い|う|え|お|は|ひ|ふ|へ|ほ|か|き|く|け|こ|ま|み|む|め|も|な|に|ぬ|ね|の|ら|り|る|れ|ろ|さ|し|す|せ|そ|た|ち|つ|て|と|や|ゆ|よ|わ|を|ん";
+    _ls = "a|i|u|e|o|ka|ki|ku|ke|ko|sa|shi|su|se|so|ha|hi|fu|he|ho|ma|mi|mu|me|mo|na|ni|nu|ne|no|ra|ri|ru|re|ro|ya|yu|yo|wa|o (wo)|n/m";
+    _hs = "あ|い|う|え|お|か|き|く|け|こ|さ|し|す|せ|そ|は|ひ|ふ|へ|ほ|ま|み|む|め|も|な|に|ぬ|ね|の|ら|り|る|れ|ろ|た|ち|つ|て|と|や|ゆ|よ|わ|を|ん";
+    _ks = "ア|イ|ウ|エ|オ|カ|キ|ク|ケ|コ|サ|シ|ス|セ|ソ|ハ|ヒ|フ|ヘ|ホ|マ|ミ|ム|メ|モ|ナ|ニ|ヌ|ネ|ノ|ラ|リ|ル|レ|ロ|タ|チ|ツ|テ|ト|ヤ|ユ|ヨ|ワ|ヲ|ン";
+    ls = _ls.split("|");
+    hs = _hs.split("|");
+    ks = _ks.split("|");
+
     range = 5;
-    l1 = _l1.split("|");
-    h1 = _h1.split("|");
 
     var prev_id = -1;
     function get_next() {
@@ -22,8 +25,8 @@ $(document).ready(function() {
         prev_id = kana_id;
         var which_right = parseInt(Math.random() * 4);
         $("#next").attr("data-right", which_right);
-        $("#kana").html(h1[kana_id]);
-        $($("#select button")[which_right]).html(l1[kana_id]);
+        $("#kana").html(hs[kana_id]);
+        $($("#select button")[which_right]).html(ls[kana_id]);
         var used_id = [kana_id];
         for (var i = 0; i <= 3; i++) {
             if (i == which_right) {
@@ -34,7 +37,7 @@ $(document).ready(function() {
                 rand_id = parseInt(Math.random() * range);
             }
             used_id.push(rand_id);
-            $($("#select button")[i]).html(l1[rand_id]);
+            $($("#select button")[i]).html(ls[rand_id]);
         }
     }
     
@@ -45,13 +48,16 @@ $(document).ready(function() {
     $("#next").click(function() {
         if ($(this).attr("data-state") == "ask") {
             var which_right = $(this).attr("data-right");
+            $($("#select button")[which_right]).removeClass("blue");
             $($("#select button")[which_right]).addClass("green");
             $(this).html("→");
             $(this).attr("data-state", "next");
         }
         else if ($(this).attr("data-state") == "next") {
-            $("#select button.option").removeClass("green");
-            $("#select button.option").removeClass("red");
+            $("#select button.option.green").addClass("blue");
+            $("#select button.option.red").addClass("blue");
+            $("#select button.option.green").removeClass("green");
+            $("#select button.option.red").removeClass("red");
             get_next();
             $(this).html("?");
             $(this).attr("data-state", "ask");
@@ -63,10 +69,13 @@ $(document).ready(function() {
         $("#next").attr("data-state", "next");
         var which_right = $("#next").attr("data-right");
         if ($(this).attr("data-id") == which_right) {
+            $(this).removeClass("blue");
             $(this).addClass("green");
         }
         else {
+            $(this).removeClass("blue");
             $(this).addClass("red");
+            $($("#select button")[which_right]).removeClass("blue");
             $($("#select button")[which_right]).addClass("green");
         }
     });
@@ -104,13 +113,14 @@ body {
     text-align: center;
     border-radius: 5px;
     margin-top: 40px;
-    font-family: "Lucida Grande";
+    font-family: "Lucida Grande", sans-serif;
 }
 #kana {
-    font-size: 120px;
+    font-size: 180px;
+    color: #333;
     line-height: 1em;
-    margin: 100px 0;
-    font-family: "Kozuka Mincho Pr6N";
+    margin: 120px 0 90px 0;
+    font-family: "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "MS Mincho", serif;
 }
 
 button {
@@ -157,25 +167,27 @@ button.red
     border-bottom: 1px solid #993020;
     border-left: 1px solid #a3362e;
 }
-button.blue:hover { background-image: -webkit-linear-gradient(top, #3e9ee5, #206bcb); }
-button.green:hover { background-image: -webkit-linear-gradient(top, #acd93b, #7cbf1f); }
-button.red:hover { background-image: -webkit-linear-gradient(top, #e53e3e, #cc3721); }
+button.blue:not(.active):not(.not-active):hover { background-image: -webkit-linear-gradient(top, #3e9ee5, #206bcb); }
+button.green:not(.active):not(.not-active):hover { background-image: -webkit-linear-gradient(top, #acd93b, #7cbf1f); }
+button.red:not(.active):not(.not-active):hover { background-image: -webkit-linear-gradient(top, #e53e3e, #cc3721); }
 .control {
     margin: 0;
-    padding: 1px 6px;
-    font-size: 18px;
+    padding: 3px 12px;
+    font-size: 14px;
     position: static;
     float: left;
 }
-.control-mid {
+span.control {
     color: #fff;
     background-image: -webkit-linear-gradient(top, #52a8e8, #377ad0);
     border-top: 1px solid #4081af;
     border-bottom: 1px solid #20559a;
-    padding: 3px 12px;
-    font-size: 14px;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.25), 0 2px 2px 0 rgba(0,0,0,0.5);  /*#b3b3b3*/
     text-shadow: 0 0px 1px rgba(0,0,0,0.7);
+}
+.control-mid {
+    border-radius: 0;
+    border-left: 0 !important;
 }
 .control-left {
     border-top-right-radius: 0;
@@ -184,14 +196,28 @@ button.red:hover { background-image: -webkit-linear-gradient(top, #e53e3e, #cc37
 .control-right {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
+    border-left: 0 !important;
+    margin-right: 8px;
+}
+.control.not-active {
+    color: #e0e0e0;
+}
+.control.not-active:hover {
+    color: #f6f6f6;
 }
 
 #select button {
     min-width: 70px;
 }
 
-#pref-range {
+#pref p {
     margin: 0;
+}
+
+#pref-range {
+}
+#pref-range button {
+    padding: 3px 6px;
 }
 
 </style>
@@ -202,8 +228,11 @@ button.red:hover { background-image: -webkit-linear-gradient(top, #e53e3e, #cc37
     <p id="pref-range">
         <button id="pref-range-decrease" class="blue control control-left">-</button><span class="control control-mid">Range: <span id="pref-range-text">5</span></span><button id="pref-range-increase" class="blue control control-right">+</button>
     </p>
+    <p id="pref-hork">
+        <button class="blue control control-left active">Hiragana</button><button class="blue control control-mid not-active">Katakana</button><button class="blue control control-right not-active">Both</button>
+    </p>
 </div>
-<p id="kana">あい</p>
+<p id="kana"></p>
 <div id="select">
     <button class="option blue" data-id="0">a</button>
     <button class="option blue" data-id="1">i</button>
