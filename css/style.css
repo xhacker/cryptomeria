@@ -1,17 +1,22 @@
 html {
     background-color: #efefef;
+    padding: 40px;
 }
 body {
-    width: 460px;
+    width: 480px;
     margin: auto;
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 20px;
     text-align: center;
     border-radius: 5px;
-    margin-top: 40px;
     font-family: "Lucida Grande", Ubuntu, "Segoe UI", sans-serif;
 }
+
+.clear {
+    clear: both;
+}
+
 #kana {
     font-size: 180px;
     color: #333;
@@ -20,6 +25,9 @@ body {
     font-family: "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "MS Mincho", serif;
 }
 
+a {
+    text-decoration: none;
+}
 button {
     font-size: 20px;
     border: 1px solid #ccc;
@@ -68,10 +76,11 @@ button.red
 button.blue:not(.active):not(.not-active):hover { background-image: -webkit-linear-gradient(top, #3e9ee5, #206bcb); }
 button.green:not(.active):not(.not-active):hover { background-image: -webkit-linear-gradient(top, #acd93b, #7cbf1f); }
 button.red:not(.active):not(.not-active):hover { background-image: -webkit-linear-gradient(top, #e53e3e, #cc3721); }
+
 .control {
     margin: 0;
-    padding: 3px 12px;
-    font-size: 14px;
+    padding: 3px 11px;
+    font-size: 13px;
     position: static;
     float: left;
 }
@@ -111,4 +120,5 @@ button.red:not(.active):not(.not-active):hover { background-image: -webkit-linea
 }
 #pref-range button.control-mid {
     padding: 3px 9px;
+    cursor: auto !important;
 }

@@ -4,6 +4,7 @@
 
   "description": "Learn Japanese Kana.",
   "icons": {
+	"48": "icon_48.png",
     "128": "icon_128.png",
 	"256": "icon_256.png"
   },
