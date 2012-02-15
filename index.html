@@ -4,7 +4,6 @@
 <head>
 <title>Cryptomeria</title>
 <meta charset="utf-8" />
-<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
 <script src="jquery.min.js"></script>
 <script>
 $(document).ready(function() {
@@ -17,9 +16,10 @@ $(document).ready(function() {
     var prev_id = -1;
     function get_next() {
         var kana_id = parseInt(Math.random() * range);
-        while (0 && kana_id == prev_id) {
+        while (kana_id == prev_id) {
             kana_id = parseInt(Math.random() * range);
         }
+        prev_id = kana_id;
         var which_right = parseInt(Math.random() * 4);
         $("#next").attr("data-right", which_right);
         $("#kana").html(h1[kana_id]);
@@ -33,13 +33,14 @@ $(document).ready(function() {
             while (used_id.indexOf(rand_id) >= 0) {
                 rand_id = parseInt(Math.random() * range);
             }
-            console.log(used_id)
             used_id.push(rand_id);
             $($("#select button")[i]).html(l1[rand_id]);
         }
     }
-
-    get_next();
+    
+    function update_range_text() {
+        $("#pref-range-text").html(range);
+    }
 
     $("#next").click(function() {
         if ($(this).attr("data-state") == "ask") {
@@ -69,6 +70,24 @@ $(document).ready(function() {
             $($("#select button")[which_right]).addClass("green");
         }
     });
+    
+    $("#pref-range-decrease").click(function() {
+        if (range <= 5) {
+            return;
+        }
+        range -= 5;
+        update_range_text();
+    });
+    $("#pref-range-increase").click(function() {
+        if (range >= 50) {
+            return;
+        }
+        range += 5;
+        update_range_text();
+        console.log(range)
+    });
+    
+    get_next();
 });
 </script>
 
@@ -85,6 +104,7 @@ body {
     text-align: center;
     border-radius: 5px;
     margin-top: 40px;
+    font-family: "Lucida Grande";
 }
 #kana {
     font-size: 120px;
@@ -109,13 +129,10 @@ button {
     border-radius: 4px;
     position: relative;
     cursor: pointer;
-    min-width: 70px;
 }
-
 button:active {
     top: 1px;
 }
-
 button.blue
 { 
     background-image: -webkit-linear-gradient(top, #52a8e8, #377ad0);
@@ -124,7 +141,6 @@ button.blue
     border-bottom: 1px solid #20559a;
     border-left: 1px solid #2e69a3;
 }
-
 button.green
 { 
     background-image: -webkit-linear-gradient(top, #b6e53e, #85cc21);
@@ -133,7 +149,6 @@ button.green
     border-bottom: 1px solid #679920;
     border-left: 1px solid #7aa32e;
 }
-
 button.red
 {
     background-image: -webkit-linear-gradient(top, #e85151, #d14b36);
@@ -142,16 +157,52 @@ button.red
     border-bottom: 1px solid #993020;
     border-left: 1px solid #a3362e;
 }
-
 button.blue:hover { background-image: -webkit-linear-gradient(top, #3e9ee5, #206bcb); }
 button.green:hover { background-image: -webkit-linear-gradient(top, #acd93b, #7cbf1f); }
 button.red:hover { background-image: -webkit-linear-gradient(top, #e53e3e, #cc3721); }
+.control {
+    margin: 0;
+    padding: 1px 6px;
+    font-size: 18px;
+    position: static;
+    float: left;
+}
+.control-mid {
+    color: #fff;
+    background-image: -webkit-linear-gradient(top, #52a8e8, #377ad0);
+    border-top: 1px solid #4081af;
+    border-bottom: 1px solid #20559a;
+    padding: 3px 12px;
+    font-size: 14px;
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.25), 0 2px 2px 0 rgba(0,0,0,0.5);  /*#b3b3b3*/
+    text-shadow: 0 0px 1px rgba(0,0,0,0.7);
+}
+.control-left {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.control-right {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+#select button {
+    min-width: 70px;
+}
+
+#pref-range {
+    margin: 0;
+}
 
 </style>
 </head>
 
 <body>
-<div id="range"></div>
+<div id="pref">
+    <p id="pref-range">
+        <button id="pref-range-decrease" class="blue control control-left">-</button><span class="control control-mid">Range: <span id="pref-range-text">5</span></span><button id="pref-range-increase" class="blue control control-right">+</button>
+    </p>
+</div>
 <p id="kana">あい</p>
 <div id="select">
     <button class="option blue" data-id="0">a</button>
