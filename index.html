@@ -14,8 +14,12 @@ $(document).ready(function() {
     l1 = _l1.split("|");
     h1 = _h1.split("|");
 
+    var prev_id = -1;
     function get_next() {
         var kana_id = parseInt(Math.random() * range);
+        while (0 && kana_id == prev_id) {
+            kana_id = parseInt(Math.random() * range);
+        }
         var which_right = parseInt(Math.random() * 4);
         $("#next").attr("data-right", which_right);
         $("#kana").html(h1[kana_id]);
