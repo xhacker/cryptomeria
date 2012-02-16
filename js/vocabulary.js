@@ -1,12 +1,11 @@
 $(document).ready(function() {
     var html = "";
     for (var i = 0; i < 6; i++) {
-        html += '<div class="vocabulary-row clearfix">';
+        html += '<div class="vocabulary-row clearfix" id="' + ls[i * 5] + '">';
         html += '<div class="title">';
         for (var j = 0; j < 5; j++) {
             html += "<p>" + hs[i * 5 + j] + "</p>";
         }
-        // USING JSON!!!
         html += '</div>'
         html += '<div class="vocabulary">';
         $.each(vs[i], function(index, value) {

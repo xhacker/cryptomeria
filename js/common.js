@@ -11,39 +11,46 @@ vs = [
         {"kana":"いう", "meaning":"say", "latin":"i u"},
         {"kana":"うえ", "meaning":"up", "latin":"u e"},
         {"kana":"うお", "meaning":"fish", "latin":"u o"},
-        {"kana":"おう", "meaning":"owe", "latin":"o u"}
+        {"kana":"おう", "meaning":"owe", "latin":"o u"},
+        {"kana":"あう", "meaning":"meet", "latin":"a u"},
+        {"kana":"おい", "meaning":"nephew", "latin":"o i"},
+        {"kana":"おおい", "meaning":"many", "latin":"o o i"},
+        {"kana":"いい", "meaning":"good", "latin":"i i"},
+        {"kana":"あおい", "meaning":"blue", "latin":"a o i"},
+        {"kana":"いえ", "meaning":"home", "latin":"i e"},
+        {"kana":"いいえ", "meaning":"no", "latin":"i i e"},
+        {"kana":"エア", "meaning":"air", "latin":"e a"}
     ],
     [
-        {"kana":"いか", "meaning":"squid", "latin":"a i"},
-        {"kana":"かう", "meaning":"buy", "latin":"i u"},
-        {"kana":"おく", "meaning":"place", "latin":"a i"},
-        {"kana":"ここ", "meaning":"here", "latin":"a i"},
-        {"kana":"かかく", "meaning":"price", "latin":"a i"},
-        {"kana":"きかい", "meaning":"opportunity", "latin":"a i"},
-        {"kana":"きこく", "meaning":"return", "latin":"a i"},
-        {"kana":"かお", "meaning":"face", "latin":"a i"},
-        {"kana":"きく", "meaning":"listen", "latin":"a i"}
+        {"kana":"いか", "meaning":"squid", "latin":"i ga"},
+        {"kana":"かう", "meaning":"buy", "latin":"ka u"},
+        {"kana":"おく", "meaning":"place", "latin":"o gu"},
+        {"kana":"ここ", "meaning":"here", "latin":"ko go"},
+        {"kana":"かかく", "meaning":"price", "latin":"ka ga gu"},
+        {"kana":"きかい", "meaning":"opportunity", "latin":"ki ga i"},
+        {"kana":"きこく", "meaning":"return", "latin":"ki go gu"},
+        {"kana":"かお", "meaning":"face", "latin":"ka o"},
+        {"kana":"きく", "meaning":"listen", "latin":"ki gu"}
     ],
     [
-        {"kana":"あさ", "meaning":"morning", "latin":"a i"},
-        {"kana":"さし", "meaning":"finger", "latin":"a i"},
-        {"kana":"アイス", "meaning":"ice", "latin":"a i"},
-        {"kana":"そこく", "meaning":"", "latin":"a i"},
-        {"kana":"ぃあい", "meaning":"match", "latin":"a i"},
-        {"kana":"ぃお", "meaning":"salt", "latin":"a i"},
-        {"kana":"ぃかく", "meaning":"", "latin":"a i"},
-        {"kana":"せかい", "meaning":"say", "latin":"i u"}
+        {"kana":"あさ", "meaning":"morning", "latin":""},
+        {"kana":"アイス", "meaning":"ice", "latin":""},
+        {"kana":"そこく", "meaning":"homeland", "latin":""},
+        {"kana":"しあい", "meaning":"game", "latin":""},
+        {"kana":"しお", "meaning":"salt", "latin":""},
+        {"kana":"すいか", "meaning":"watermelon", "latin":""},
+        {"kana":"せかい", "meaning":"world", "latin":""}
     ],
     [
-        {"kana":"あい", "meaning":"love", "latin":"a i"},
-        {"kana":"いう", "meaning":"say", "latin":"i u"}
+        {"kana":"あい", "meaning":"miao", "latin":""},
+        {"kana":"いう", "meaning":"miao", "latin":""}
     ],
     [
-        {"kana":"あい", "meaning":"love", "latin":"a i"},
-        {"kana":"いう", "meaning":"say", "latin":"i u"}
+        {"kana":"あい", "meaning":"miao", "latin":""},
+        {"kana":"いう", "meaning":"miao", "latin":""}
     ],
     [
-        {"kana":"あい", "meaning":"love", "latin":"a i"},
-        {"kana":"いう", "meaning":"say", "latin":"i u"}
+        {"kana":"あい", "meaning":"miao", "latin":""},
+        {"kana":"いう", "meaning":"miao", "latin":""}
     ]
 ];
