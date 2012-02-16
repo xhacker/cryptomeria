@@ -30,24 +30,35 @@ vs = [
         {"kana":"きかい", "meaning":"opportunity", "latin":"ki ga i"},
         {"kana":"きこく", "meaning":"return", "latin":"ki go gu"},
         {"kana":"かお", "meaning":"face", "latin":"ka o"},
-        {"kana":"きく", "meaning":"listen", "latin":"ki gu"}
+        {"kana":"きく", "meaning":"listen", "latin":"ki gu"},
+        {"kana":"きおく", "meaning":"memory", "latin":"ki o gu"},
+        {"kana":"くけい", "meaning":"rectangle", "latin":"ku ge i"},
+        {"kana":"くう", "meaning":"eat", "latin":"ku u"},
+        {"kana":"くい", "meaning":"regret", "latin":"ku i"},
+        {"kana":"いく", "meaning":"go", "latin":"i gu"},
+        {"kana":"ココア", "meaning":"cocoa", "latin":"co go a"},
+        {"kana":"けいき", "meaning":"economy", "latin":"ke i gi"},
+        {"kana":"こえ", "meaning":"sound", "latin":"ko e"},
+        {"kana":"こい", "meaning":"carp", "latin":"ko i"}
     ],
     [
-        {"kana":"あさ", "meaning":"morning", "latin":""},
-        {"kana":"アイス", "meaning":"ice", "latin":""},
-        {"kana":"そこく", "meaning":"homeland", "latin":""},
-        {"kana":"しあい", "meaning":"game", "latin":""},
-        {"kana":"しお", "meaning":"salt", "latin":""},
-        {"kana":"すいか", "meaning":"watermelon", "latin":""},
-        {"kana":"せかい", "meaning":"world", "latin":""}
+        {"kana":"あさ", "meaning":"morning", "latin":"a sa"},
+        {"kana":"アイス", "meaning":"ice", "latin":"a i su"},
+        {"kana":"そこく", "meaning":"homeland", "latin":"so go gu"},
+        {"kana":"しあい", "meaning":"game", "latin":"shi a i"},
+        {"kana":"しお", "meaning":"salt", "latin":"shi o"},
+        {"kana":"すいか", "meaning":"watermelon", "latin":"su i ga"},
+        {"kana":"せかい", "meaning":"world", "latin":"se ga i"},
+        {"kana":"きせき", "meaning":"miracle", "latin":"ki se gi"},
+        {"kana":"あさい", "meaning":"shallow", "latin":"a sa i"},
+        {"kana":"きそ", "meaning":"basis", "latin":"ki so"},
+        {"kana":"あす", "meaning":"tomorrow", "latin":"a su"},
+        {"kana":"しき", "meaning":"four seasons", "latin":"shi gi"},
+        {"kana":"あし", "meaning":"foot", "latin":"a shi"}
     ],
     [
-        {"kana":"あい", "meaning":"miao", "latin":""},
-        {"kana":"いう", "meaning":"miao", "latin":""}
     ],
     [
-        {"kana":"あい", "meaning":"miao", "latin":""},
-        {"kana":"いう", "meaning":"miao", "latin":""}
     ],
     [
         {"kana":"あい", "meaning":"miao", "latin":""},
