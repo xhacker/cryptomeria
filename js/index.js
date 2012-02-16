@@ -84,7 +84,7 @@ $(document).ready(function() {
         get_next();
     });
     $("#pref-range-increase").click(function() {
-        if (pref_range >= 50) {
+        if (pref_range >= 30) {
             return;
         }
         pref_range += 5;

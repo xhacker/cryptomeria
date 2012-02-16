@@ -4,17 +4,28 @@ html {
 }
 body {
     width: 480px;
-    margin: auto;
-    background-color: #fff;
-    border: 1px solid #ddd;
     padding: 20px;
-    text-align: center;
-    border-radius: 5px;
+    margin: auto;
     font-family: "Lucida Grande", Ubuntu, "Segoe UI", sans-serif;
 }
+#content {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+}
 
-.clear {
-    clear: both;
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+.clearfix {
+	display: inline-block;
 }
 
 #kana {
@@ -107,6 +118,26 @@ button.red:not(.active):not(.not-active):hover { background-image: -webkit-linea
 
 #select button {
     min-width: 70px;
+}
+
+#nav {
+    margin-top: 0;
+}
+#nav a {
+    color: #666;
+    padding: 3px 12px;
+    border-radius: 13px;
+}
+#nav a:not(.current):hover {
+    background-color: #fafafa;
+}
+#nav a.current {
+    background-color: #888;
+    color: #fff;
+    margin-right: 5px;
+}
+#nav a.current:not(:first-child) {
+    margin-left: 5px;
 }
 
 #pref p {
