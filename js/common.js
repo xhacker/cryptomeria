@@ -4,3 +4,46 @@ _ks = "ア|イ|ウ|エ|オ|カ|キ|ク|ケ|コ|サ|シ|ス|セ|ソ|タ|チ|ツ|�
 ls = _ls.split("|");
 hs = _hs.split("|");
 ks = _ks.split("|");
+
+vs = [
+    [
+        {"kana":"あい", "meaning":"love", "latin":"a i"},
+        {"kana":"いう", "meaning":"say", "latin":"i u"},
+        {"kana":"うえ", "meaning":"up", "latin":"u e"},
+        {"kana":"うお", "meaning":"fish", "latin":"u o"},
+        {"kana":"おう", "meaning":"owe", "latin":"o u"}
+    ],
+    [
+        {"kana":"いか", "meaning":"squid", "latin":"a i"},
+        {"kana":"かう", "meaning":"buy", "latin":"i u"},
+        {"kana":"おく", "meaning":"place", "latin":"a i"},
+        {"kana":"ここ", "meaning":"here", "latin":"a i"},
+        {"kana":"かかく", "meaning":"price", "latin":"a i"},
+        {"kana":"きかい", "meaning":"opportunity", "latin":"a i"},
+        {"kana":"きこく", "meaning":"return", "latin":"a i"},
+        {"kana":"かお", "meaning":"face", "latin":"a i"},
+        {"kana":"きく", "meaning":"listen", "latin":"a i"}
+    ],
+    [
+        {"kana":"あさ", "meaning":"morning", "latin":"a i"},
+        {"kana":"さし", "meaning":"finger", "latin":"a i"},
+        {"kana":"アイス", "meaning":"ice", "latin":"a i"},
+        {"kana":"そこく", "meaning":"", "latin":"a i"},
+        {"kana":"ぃあい", "meaning":"match", "latin":"a i"},
+        {"kana":"ぃお", "meaning":"salt", "latin":"a i"},
+        {"kana":"ぃかく", "meaning":"", "latin":"a i"},
+        {"kana":"せかい", "meaning":"say", "latin":"i u"}
+    ],
+    [
+        {"kana":"あい", "meaning":"love", "latin":"a i"},
+        {"kana":"いう", "meaning":"say", "latin":"i u"}
+    ],
+    [
+        {"kana":"あい", "meaning":"love", "latin":"a i"},
+        {"kana":"いう", "meaning":"say", "latin":"i u"}
+    ],
+    [
+        {"kana":"あい", "meaning":"love", "latin":"a i"},
+        {"kana":"いう", "meaning":"say", "latin":"i u"}
+    ]
+];

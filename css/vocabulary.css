@@ -1,0 +1,58 @@
+.vocabulary-row {
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 20px 10px;
+    text-align: left;
+}
+.title {
+    float: left;
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    padding: 0;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0 36px 0 0;
+    color: #999;
+}
+.title p {
+    padding: 10px;
+    margin: 0;
+}
+.title p:first-child {
+    border-radius: 10px;
+    background-color: #aaa;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.vocabulary {
+    float: left;
+}
+.vocabulary p {
+	margin: 0;
+}
+.vocabulary .kana {
+    font-family: "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "MS Mincho", serif;
+    font-size: 32px;
+    line-height: 64px;
+    margin-right: 16px;
+}
+.vocabulary .meaning {
+	font-size: 20px;
+	color: #ccc;
+	margin-right: 20px;
+}
+.vocabulary .latin {
+	cursor: pointer;
+	color: #666;
+	border-bottom: 1px dashed #bbb;
+}
+.vocabulary .latin:not(.active):hover {
+	color: #444;
+	border-bottom: 0;
+}
+.vocabulary .latin.active {
+	font-size: 20px;
+	color: #666;
+	border: 0;
+	cursor: auto;
+}

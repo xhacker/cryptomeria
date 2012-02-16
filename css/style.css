@@ -6,7 +6,7 @@ body {
     width: 480px;
     padding: 20px;
     margin: auto;
-    font-family: "Lucida Grande", Ubuntu, "Segoe UI", sans-serif;
+    font-family: "Lucida Grande", Ubuntu, Candara, Verdana, sans-serif;
 }
 #content {
     border: 1px solid #ddd;
@@ -23,9 +23,6 @@ body {
 	visibility: hidden;
 	line-height: 0;
 	height: 0;
-}
-.clearfix {
-	display: inline-block;
 }
 
 #kana {

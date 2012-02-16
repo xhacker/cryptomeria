@@ -1,13 +1,20 @@
 $(document).ready(function() {
-    pref_range = 5;
+    pref_range = 1;
     pref_hork = "h";
 
     var prev_id = -1;
     var prev_hork;
     function get_next() {
-        var kana_id = parseInt(Math.random() * pref_range);
+        $("#select button.option.green").addClass("blue");
+        $("#select button.option.red").addClass("blue");
+        $("#select button.option.green").removeClass("green");
+        $("#select button.option.red").removeClass("red");
+        $("#next").html("?");
+        $("#next").attr("data-state", "ask");
+
+        var kana_id = parseInt(Math.random() * pref_range * 5);
         while (kana_id == prev_id) {
-            kana_id = parseInt(Math.random() * pref_range);
+            kana_id = parseInt(Math.random() * pref_range * 5);
         }
         prev_id = kana_id;
         var which_right = parseInt(Math.random() * 4);
@@ -27,9 +34,9 @@ $(document).ready(function() {
             if (i == which_right) {
                 continue;
             }
-            var rand_id = parseInt(Math.random() * pref_range);
+            var rand_id = parseInt(Math.random() * pref_range * 5);
             while (used_id.indexOf(rand_id) >= 0) {
-                rand_id = parseInt(Math.random() * pref_range);
+                rand_id = parseInt(Math.random() * pref_range * 5);
             }
             used_id.push(rand_id);
             $($("#select button")[i]).html(ls[rand_id]);
@@ -49,25 +56,18 @@ $(document).ready(function() {
             $(this).attr("data-state", "next");
         }
         else if ($(this).attr("data-state") == "next") {
-            $("#select button.option.green").addClass("blue");
-            $("#select button.option.red").addClass("blue");
-            $("#select button.option.green").removeClass("green");
-            $("#select button.option.red").removeClass("red");
             get_next();
-            $(this).html("?");
-            $(this).attr("data-state", "ask");
         }
     });
 
     $(".option").click(function() {
-        $("#next").html("→");
-        $("#next").attr("data-state", "next");
         var which_right = $("#next").attr("data-right");
         if ($(this).attr("data-id") == which_right) {
-            $(this).removeClass("blue");
-            $(this).addClass("green");
+            get_next();
         }
         else {
+            $("#next").html("→");
+            $("#next").attr("data-state", "next");
             $(this).removeClass("blue");
             $(this).addClass("red");
             $($("#select button")[which_right]).removeClass("blue");
@@ -76,18 +76,18 @@ $(document).ready(function() {
     });
     
     $("#pref-range-decrease").click(function() {
-        if (pref_range <= 5) {
+        if (pref_range <= 1) {
             return;
         }
-        pref_range -= 5;
+        pref_range--;
         update_range_text();
         get_next();
     });
     $("#pref-range-increase").click(function() {
-        if (pref_range >= 30) {
+        if (pref_range >= 6) {
             return;
         }
-        pref_range += 5;
+        pref_range++;
         update_range_text();
         get_next();
     });
