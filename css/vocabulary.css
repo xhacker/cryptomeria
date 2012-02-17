@@ -1,5 +1,5 @@
 #link {
-    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-family: "Hiragino Kaku Gothic ProN", "Kochi Gothic", Meiryo, sans-serif;
     font-size: 18px;
     margin: 0;
 }
@@ -18,7 +18,7 @@
 }
 .title {
     float: left;
-    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-family: "Hiragino Kaku Gothic ProN", "Kochi Gothic", Meiryo, sans-serif;
     padding: 0;
     font-weight: bold;
     font-size: 36px;
@@ -43,7 +43,7 @@
 	margin: 0;
 }
 .vocabulary .kana {
-    font-family: "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "MS Mincho", serif;
+    font-family: "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "Kochi Mincho", "MS Mincho", serif;
     font-size: 32px;
     line-height: 64px;
     margin-right: 16px;

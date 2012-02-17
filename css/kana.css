@@ -5,7 +5,7 @@
 .kana-char {
     font-size: 32px;
     line-height: 60px;
-    font-family: "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "MS Mincho", serif;
+    font-family: "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "Kochi Mincho", "MS Mincho", serif;
 }
 .kana-row {
     border-top: 1px solid #ccc;

@@ -6,7 +6,7 @@ body {
     width: 480px;
     padding: 20px;
     margin: auto;
-    font-family: "Lucida Grande", Ubuntu, Candara, Verdana, sans-serif;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Ubuntu, "DejaVu Sans", Verdana, sans-serif;
 }
 #content {
     border: 1px solid #ddd;
@@ -30,7 +30,7 @@ body {
     color: #333;
     line-height: 1em;
     margin: 120px 0 90px 0;
-    font-family: "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "MS Mincho", serif;
+    font-family: "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "Kochi Mincho", "MS Mincho", serif;
 }
 
 a {
@@ -52,7 +52,7 @@ button {
     border-radius: 4px;
     position: relative;
     cursor: pointer;
-    font-family: "Lucida Grande", Ubuntu, "Segoe UI", sans-serif;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Ubuntu, "DejaVu Sans", Verdana, sans-serif;
 }
 button:active {
     top: 1px;
