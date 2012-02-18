@@ -43,12 +43,21 @@ $(document).ready(function() {
         }
     }
     
-    function update_range_text() {
+    function update_range_func() {
         $("#pref-range-text").html(pref_range);
+        reset_counter();
+    }
+    
+    function reset_counter() {
+        $("#counter-ac").html("0");
+        $("#counter-total").html("0");
+        $("#counter").hide();
     }
 
     $("#next").click(function() {
         if ($(this).attr("data-state") == "ask") {
+            $("#counter").show();
+            $("#counter-total").html(parseInt($("#counter-total").html()) + 1);
             var which_right = $(this).attr("data-right");
             $($("#select button")[which_right]).removeClass("blue");
             $($("#select button")[which_right]).addClass("green");
@@ -61,8 +70,17 @@ $(document).ready(function() {
     });
 
     $(".option").click(function() {
+        $("#counter").show();
+        if ($("#next").attr("data-state") == "ask") {
+            // first click on the option
+            $("#counter-total").html(parseInt($("#counter-total").html()) + 1);
+        }
         var which_right = $("#next").attr("data-right");
         if ($(this).attr("data-id") == which_right) {
+            if ($("#next").attr("data-state") == "ask") {
+                // first click on the option
+                $("#counter-ac").html(parseInt($("#counter-ac").html()) + 1);
+            }
             get_next();
         }
         else {
@@ -80,7 +98,7 @@ $(document).ready(function() {
             return;
         }
         pref_range--;
-        update_range_text();
+        update_range_func();
         get_next();
     });
     $("#pref-range-increase").click(function() {
@@ -88,7 +106,7 @@ $(document).ready(function() {
             return;
         }
         pref_range++;
-        update_range_text();
+        update_range_func();
         get_next();
     });
     
@@ -99,6 +117,7 @@ $(document).ready(function() {
         $("#pref-hork button.active").removeClass("active");
         $(this).addClass("active");
         $(this).removeClass("not-active");
+        reset_counter();
         get_next();
     });
     

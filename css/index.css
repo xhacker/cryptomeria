@@ -1,0 +1,9 @@
+#counter {
+    display: none;
+    color: #666;
+    padding-top: 4px;
+    float: right;
+}
+#counter-ac {
+    color: #679920;
+}

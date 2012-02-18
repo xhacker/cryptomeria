@@ -1,5 +1,5 @@
 #link {
-    font-family: "Hiragino Kaku Gothic ProN", "Kochi Gothic", Meiryo, sans-serif;
+    font-family: "Hiragino Kaku Gothic ProN", "Kochi Gothic", Meiryo, "MS Gothic", sans-serif;
     font-size: 18px;
     margin: 0;
 }
@@ -18,12 +18,12 @@
 }
 .title {
     float: left;
-    font-family: "Hiragino Kaku Gothic ProN", "Kochi Gothic", Meiryo, sans-serif;
+    font-family: "Hiragino Kaku Gothic ProN", "Kochi Gothic", Meiryo, "MS Gothic", sans-serif;
     padding: 0;
     font-weight: bold;
     font-size: 36px;
     line-height: 36px;
-    margin: 0 32px 0 0;
+    margin: 0 28px 0 0;
     color: #999;
 }
 .title p {
@@ -46,12 +46,12 @@
     font-family: "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "Kochi Mincho", "MS Mincho", serif;
     font-size: 32px;
     line-height: 64px;
-    margin-right: 16px;
+    margin-right: 10px;
 }
 .vocabulary .meaning {
 	font-size: 20px;
 	color: #ccc;
-	margin-right: 20px;
+	margin-right: 12px;
 }
 .vocabulary .latin {
 	cursor: pointer;

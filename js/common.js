@@ -1,4 +1,4 @@
-_ls = "a|i|u|e|o|ka|ki|ku|ke|ko|sa|shi|su|se|so|ta|chi|tsu|te|to|na|ni|nu|ne|no|ha|hi|fu|he|ho|ma|mi|mu|me|mo|ra|ri|ru|re|ro|ya|yu|yo|wa|o (wo)|n/m";
+_ls = "a|i|u|e|o|ka|ki|ku|ke|ko|sa|si|su|se|so|ta|ci|cu|te|to|na|ni|nu|ne|no|ha|hi|hu|he|ho|ma|mi|mu|me|mo|ra|ri|ru|re|ro|ya|yu|yo|wa|o (wo)|n/m";
 _hs = "あ|い|う|え|お|か|き|く|け|こ|さ|し|す|せ|そ|た|ち|つ|て|と|な|に|ぬ|ね|の|は|ひ|ふ|へ|ほ|ま|み|む|め|も|ら|り|る|れ|ろ|や|ゆ|よ|わ|を|ん";
 _ks = "ア|イ|ウ|エ|オ|カ|キ|ク|ケ|コ|サ|シ|ス|セ|ソ|タ|チ|ツ|テ|ト|ナ|ニ|ヌ|ネ|ノ|ハ|ヒ|フ|ヘ|ホ|マ|ミ|ム|メ|モ|ラ|リ|ル|レ|ロ|ヤ|ユ|ヨ|ワ|ヲ|ン";
 ls = _ls.split("|");
@@ -45,26 +45,26 @@ vs = [
         {"kana":"あさ", "meaning":"morning", "latin":"a sa"},
         {"kana":"アイス", "meaning":"ice", "latin":"a i su"},
         {"kana":"そこく", "meaning":"homeland", "latin":"so go gu"},
-        {"kana":"しあい", "meaning":"game", "latin":"shi a i"},
-        {"kana":"しお", "meaning":"salt", "latin":"shi o"},
+        {"kana":"しあい", "meaning":"game", "latin":"si a i"},
+        {"kana":"しお", "meaning":"salt", "latin":"si o"},
         {"kana":"すいか", "meaning":"watermelon", "latin":"su i ga"},
         {"kana":"せかい", "meaning":"world", "latin":"se ga i"},
         {"kana":"きせき", "meaning":"miracle", "latin":"ki se gi"},
         {"kana":"あさい", "meaning":"shallow", "latin":"a sa i"},
         {"kana":"きそ", "meaning":"basis", "latin":"ki so"},
         {"kana":"あす", "meaning":"tomorrow", "latin":"a su"},
-        {"kana":"しき", "meaning":"four seasons", "latin":"shi gi"},
-        {"kana":"あし", "meaning":"foot", "latin":"a shi"}
+        {"kana":"しき", "meaning":"four seasons", "latin":"si gi"},
+        {"kana":"あし", "meaning":"foot", "latin":"a si"}
     ],
     [
     	{"kana":"おたく", "meaning":"home", "latin":"o da gu"},
-    	{"kana":"ちかてつ", "meaning":"subway", "latin":"chi ga de zu"},
+    	{"kana":"ちかてつ", "meaning":"subway", "latin":"ci ga de zu"},
     	{"kana":"たたかう", "meaning":"fight", "latin":"ta da ga u"},
     	{"kana":"きたい", "meaning":"expect", "latin":"ki da i"},
-    	{"kana":"ちかく", "meaning":"near", "latin":"chi ga gu"},
-    	{"kana":"ちしき", "meaning":"knowledge", "latin":"chi shi gi"},
+    	{"kana":"ちかく", "meaning":"near", "latin":"ci ga gu"},
+    	{"kana":"ちしき", "meaning":"knowledge", "latin":"ci si gi"},
     	{"kana":"あいて", "meaning":"opponent", "latin":"a i de"},
-    	{"kana":"てあし", "meaning":"hands and feet", "latin":"te a shi"},
+    	{"kana":"てあし", "meaning":"hands and feet", "latin":"te a si"},
     	{"kana":"あと", "meaning":"later", "latin":"a do"},
     	{"kana":"いたい", "meaning":"painful", "latin":"i da i"},
     	{"kana":"とち", "meaning":"land", "latin":"to ji"},
@@ -73,11 +73,50 @@ vs = [
     	{"kana":"ちかう", "meaning":"pledge", "latin":"qi ga u"}
     ],
     [
-        {"kana":"みみみ", "meaning":"miao", "latin":""},
-        {"kana":"みみみ", "meaning":"miao", "latin":""}
+        {"kana":"かない", "meaning":"wife", "latin":"ka na i"},
+        {"kana":"なに", "meaning":"what", "latin":"na ni"},
+        {"kana":"あなた", "meaning":"you", "latin":"a na da"},
+        {"kana":"にあう", "meaning":"match", "latin":"ni a u"},
+        {"kana":"きぬ", "meaning":"silk", "latin":"ki nu"},
+        {"kana":"きたない", "meaning":"dirty", "latin":"ki da na i"},
+        {"kana":"ぬの", "meaning":"cloth", "latin":"nu no"},
+        {"kana":"きのう", "meaning":"yesterday", "latin":"ki no u"},
+        {"kana":"さかな", "meaning":"fish", "latin":"sa ga na"},
+        {"kana":"なく", "meaning":"cry", "latin":"na gu"},
+        {"kana":"にく", "meaning":"meat", "latin":"ni gu"},
+        {"kana":"いぬ", "meaning":"dog", "latin":"i nu"},
+        {"kana":"ねこ", "meaning":"cat", "latin":"ne go"},
+        {"kana":"くに", "meaning":"country", "latin":"ku ni"},
+        {"kana":"のこす", "meaning":"leave", "latin":"no go su"},
+        {"kana":"ぬく", "meaning":"pull", "latin":"nu gu"},
+        {"kana":"きのこ", "meaning":"mushroom", "latin":"ki no go"}
     ],
     [
-        {"kana":"みみみ", "meaning":"miao", "latin":""},
-        {"kana":"みみみ", "meaning":"miao", "latin":""}
+        {"kana":"はこ", "meaning":"miao", "latin":"ha go"},
+        {"kana":"ひふ", "meaning":"miao", "latin":"hi hu"},
+        {"kana":"ふかい", "meaning":"miao", "latin":"hu ga i"},
+        {"kana":"ほそい", "meaning":"miao", "latin":"ho so i"},
+        {"kana":"へいたい", "meaning":"miao", "latin":"he i da i"},
+        {"kana":"ひくい", "meaning":"miao", "latin":"hi gu i"},
+        {"kana":"ひかく", "meaning":"miao", "latin":"hi ga gu"},
+        {"kana":"はく", "meaning":"miao", "latin":"ha gu"},
+        {"kana":"はち", "meaning":"bee", "latin":"ha zi"},
+        {"kana":"ひにち", "meaning":"miao", "latin":"hi ni zi"},
+        {"kana":"きはく", "meaning":"miao", "latin":"ki ha gu"},
+        {"kana":"ひにく", "meaning":"miao", "latin":"hi ni gu"},
+        {"kana":"へいき", "meaning":"miao", "latin":"he i gi"},
+        {"kana":"ほかの", "meaning":"miao", "latin":"ho ga no"},
+        {"kana":"ひと", "meaning":"miao", "latin":"hi do"},
+        {"kana":"ほす", "meaning":"miao", "latin":"ho su"},
+        {"kana":"ひとこと", "meaning":"miao", "latin":"hi do go do"},
+        {"kana":"はくし", "meaning":"miao", "latin":"ha gu si"},
+        {"kana":"はついく", "meaning":"miao", "latin":"ha zu i gu"},
+        {"kana":"はかせ", "meaning":"miao", "latin":"ha ga se"},
+        {"kana":"ひこうき", "meaning":"miao", "latin":"hi go u gi"},
+        {"kana":"ひちくい", "meaning":"miao", "latin":"hi zi gu i"},
+        {"kana":"ひにつきに", "meaning":"miao", "latin":"hi ni zu gi ni"},
+        {"kana":"ふくし", "meaning":"miao", "latin":"hu gu si"},
+        {"kana":"へたくそ", "meaning":"miao", "latin":"he da gu so"},
+        {"kana":"ほしい", "meaning":"miao", "latin":"ho si i"}
     ]
 ];
