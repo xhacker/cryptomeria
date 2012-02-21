@@ -57,20 +57,20 @@ vs = [
         {"kana":"あし", "meaning":"foot", "latin":"a si"}
     ],
     [
-    	{"kana":"おたく", "meaning":"home", "latin":"o da gu"},
-    	{"kana":"ちかてつ", "meaning":"subway", "latin":"ci ga de zu"},
-    	{"kana":"たたかう", "meaning":"fight", "latin":"ta da ga u"},
-    	{"kana":"きたい", "meaning":"expect", "latin":"ki da i"},
-    	{"kana":"ちかく", "meaning":"near", "latin":"ci ga gu"},
-    	{"kana":"ちしき", "meaning":"knowledge", "latin":"ci si gi"},
-    	{"kana":"あいて", "meaning":"opponent", "latin":"a i de"},
-    	{"kana":"てあし", "meaning":"hands and feet", "latin":"te a si"},
-    	{"kana":"あと", "meaning":"later", "latin":"a do"},
-    	{"kana":"いたい", "meaning":"painful", "latin":"i da i"},
-    	{"kana":"とち", "meaning":"land", "latin":"to ji"},
-    	{"kana":"とけい", "meaning":"watch", "latin":"to ge i"},
-    	{"kana":"いと", "meaning":"intent", "latin":"i do"},
-    	{"kana":"ちかう", "meaning":"pledge", "latin":"qi ga u"}
+        {"kana":"おたく", "meaning":"home", "latin":"o da gu"},
+        {"kana":"ちかてつ", "meaning":"subway", "latin":"ci ga de zu"},
+        {"kana":"たたかう", "meaning":"fight", "latin":"ta da ga u"},
+        {"kana":"きたい", "meaning":"expect", "latin":"ki da i"},
+        {"kana":"ちかく", "meaning":"near", "latin":"ci ga gu"},
+        {"kana":"ちしき", "meaning":"knowledge", "latin":"ci si gi"},
+        {"kana":"あいて", "meaning":"opponent", "latin":"a i de"},
+        {"kana":"てあし", "meaning":"hands and feet", "latin":"te a si"},
+        {"kana":"あと", "meaning":"later", "latin":"a do"},
+        {"kana":"いたい", "meaning":"painful", "latin":"i da i"},
+        {"kana":"とち", "meaning":"land", "latin":"to ji"},
+        {"kana":"とけい", "meaning":"watch", "latin":"to ge i"},
+        {"kana":"いと", "meaning":"intent", "latin":"i do"},
+        {"kana":"ちかう", "meaning":"pledge", "latin":"qi ga u"}
     ],
     [
         {"kana":"かない", "meaning":"wife", "latin":"ka na i"},
@@ -92,7 +92,7 @@ vs = [
         {"kana":"きのこ", "meaning":"mushroom", "latin":"ki no go"}
     ],
     [
-        {"kana":"はい", "meaning":"yes", "latin":"ha i"},	
+        {"kana":"はい", "meaning":"yes", "latin":"ha i"}, 
         {"kana":"はこ", "meaning":"box", "latin":"ha go"},
         {"kana":"ひふ", "meaning":"skin", "latin":"hi hu"},
         {"kana":"ふかい", "meaning":"deep", "latin":"hu ga i"},

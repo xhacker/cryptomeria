@@ -20,8 +20,8 @@ $(document).ready(function() {
     }
     $("#content").append(html);
 
-	$(".latin").click(function() {
-		$(this).html($(this).attr("data-latin"));
-		$(this).addClass("active");
-	});
+    $(".latin").click(function() {
+        $(this).html($(this).attr("data-latin"));
+        $(this).addClass("active");
+    });
 });
