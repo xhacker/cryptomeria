@@ -25,19 +25,12 @@ body {
     height: 0;
 }
 
-#kana {
-    font-size: 180px;
-    color: #333;
-    line-height: 1em;
-    margin: 120px 0 90px 0;
-    font-family: "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "Kochi Mincho", "MS Mincho", serif;
-}
-
 a {
     text-decoration: none;
 }
 button {
     font-size: 20px;
+    line-height: 23px;
     border: 1px solid #ccc;
     background-image: -webkit-linear-gradient(top, #e8e8e8, #d1d1d1);
     border-top: 1px solid #b0b0b0;
@@ -52,7 +45,7 @@ button {
     border-radius: 4px;
     position: relative;
     cursor: pointer;
-    font-family: "Lucida Grande", "Lucida Sans Unicode", Ubuntu, "DejaVu Sans", Verdana, sans-serif;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Ubuntu, "DejaVu Sans", Verdana, "Hiragino Kaku Gothic ProN", "Kochi Gothic", Meiryo, "MS Gothic" sans-serif;
 }
 button:active {
     top: 1px;
@@ -81,14 +74,15 @@ button.red
     border-bottom: 1px solid #993020;
     border-left: 1px solid #a3362e;
 }
-button.blue:not(.active):not(.not-active):hover { background-image: -webkit-linear-gradient(top, #3e9ee5, #206bcb); }
-button.green:not(.active):not(.not-active):hover { background-image: -webkit-linear-gradient(top, #acd93b, #7cbf1f); }
-button.red:not(.active):not(.not-active):hover { background-image: -webkit-linear-gradient(top, #e53e3e, #cc3721); }
+button.blue:not(.active):not(.not-active):not(.text):hover { background-image: -webkit-linear-gradient(top, #3e9ee5, #206bcb); }
+button.green:not(.active):not(.not-active):not(.text):hover { background-image: -webkit-linear-gradient(top, #acd93b, #7cbf1f); }
+button.red:not(.active):not(.not-active):not(.text):hover { background-image: -webkit-linear-gradient(top, #e53e3e, #cc3721); }
 
 .control {
     margin: 0;
-    padding: 3px 11px;
+    padding: 3px 12px;
     font-size: 13px;
+    line-height: 15px;
     position: static;
     float: left;
 }
@@ -105,6 +99,9 @@ button.red:not(.active):not(.not-active):hover { background-image: -webkit-linea
     border-top-left-radius: 0;
     border-left: 0 !important;
     margin-right: 10px;
+}
+.control.active {
+    font-weight: bold;
 }
 .control.not-active {
     color: #e0e0e0;

@@ -1,6 +1,7 @@
 $(document).ready(function() {
     pref_range = 1;
     pref_hork = "h";
+    pref_direction = "kanalatin";
 
     var prev_id = -1;
     var prev_hork;
@@ -19,18 +20,36 @@ $(document).ready(function() {
             kana_id = parseInt(Math.random() * kana_range);
         }
         prev_id = kana_id;
-        var which_right = parseInt(Math.random() * 4);
-        $("#next").attr("data-right", which_right);
-        if (pref_hork == "h" || (pref_hork == "both" && prev_hork == "k")) {
-            kana = hs[kana_id];
-            prev_hork = "h";
+
+        if (pref_hork == "h") {
+            hork = "h";
+        }
+        else if (pref_hork == "k") {
+            hork = "k";
         }
         else {
-            kana = ks[kana_id];
-            prev_hork = "k";
+            hork = (prev_hork == "h") ? "k" : "h";
+            prev_hork = hork;
         }
-        $("#kana").html(kana);
-        $($("#select button")[which_right]).html(ls[kana_id]);
+
+        if (pref_direction == "kanalatin") {
+            ch = (hork == "h") ? hs[kana_id] : ks[kana_id];
+        }
+        else {
+            ch = ls[kana_id];
+        }
+        $("#kana").html(ch);
+
+        var which_right = parseInt(Math.random() * 4);
+        $("#next").attr("data-right", which_right);
+        if (pref_direction == "kanalatin") {
+            right_ch = ls[kana_id];
+        }
+        else {
+            right_ch = (hork == "h") ? hs[kana_id] : ks[kana_id];
+        }
+        $($("#select button")[which_right]).html(right_ch);
+
         var used_id = [kana_id];
         for (var i = 0; i <= 3; i++) {
             if (i == which_right) {
@@ -41,7 +60,13 @@ $(document).ready(function() {
                 rand_id = parseInt(Math.random() * kana_range);
             }
             used_id.push(rand_id);
-            $($("#select button")[i]).html(ls[rand_id]);
+            if (pref_direction == "kanalatin") {
+                option_ch = ls[rand_id];
+            }
+            else {
+                option_ch = (hork == "h") ? hs[rand_id] : ks[rand_id];
+            }
+            $($("#select button")[i]).html(option_ch);
         }
     }
     
@@ -119,6 +144,18 @@ $(document).ready(function() {
         pref_hork = $(this).attr("data-hork");
         $("#pref-hork button.active").addClass("not-active");
         $("#pref-hork button.active").removeClass("active");
+        $(this).addClass("active");
+        $(this).removeClass("not-active");
+        reset_counter();
+        get_next();
+    });
+
+    $("#pref-direction button").click(function() {
+        pref_direction = $(this).attr("data-direction");
+        $("#kana").toggleClass("kana");
+        $("#kana").toggleClass("latin");
+        $("#pref-direction button.active").addClass("not-active");
+        $("#pref-direction button.active").removeClass("active");
         $(this).addClass("active");
         $(this).removeClass("not-active");
         reset_counter();

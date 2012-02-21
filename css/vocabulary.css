@@ -4,14 +4,18 @@ body {
 #link {
     font-family: "Hiragino Kaku Gothic ProN", "Kochi Gothic", Meiryo, "MS Gothic", sans-serif;
     font-size: 18px;
-    margin: 0;
+    margin: 0 0 0 6px;
+    float: left;
 }
 #link a {
-    margin: 0 5px;
+    margin: 0 3px;
     color: #666;
 }
 #link a:hover {
     color: #000;
+}
+#pref {
+    float: right;
 }
 .vocabulary-row {
     border-top: 1px solid #ccc;
@@ -46,10 +50,22 @@ body {
     margin: 0;
 }
 .vocabulary .kana {
-    font-family: "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "Kochi Mincho", "MS Mincho", serif;
+    font-family: Georgia, "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "Kochi Mincho", "MS Mincho", serif;
+    color: #444;
     font-size: 32px;
     line-height: 64px;
     margin-right: 10px;
+    border-bottom: 1px dashed #bbb;
+    cursor: pointer;
+}
+.vocabulary .kana:not(.active):hover {
+    color: #222;
+    border: 0;
+}
+.vocabulary .kana.active {
+    color: #000;
+    border: 0;
+    cursor: auto;
 }
 .vocabulary .meaning {
     font-size: 20px;
@@ -63,7 +79,7 @@ body {
 }
 .vocabulary .latin:not(.active):hover {
     color: #444;
-    border-bottom: 0;
+    border: 0;
 }
 .vocabulary .latin.active {
     font-size: 20px;

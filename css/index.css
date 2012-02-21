@@ -9,3 +9,17 @@
 #counter-ac {
     color: #679920;
 }
+.kana {
+    font-size: 180px;
+    line-height: 180px;
+    color: #333;
+    margin: 120px 0 90px 0;
+    font-family: "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "Kochi Mincho", "MS Mincho", serif;
+}
+.latin {
+    font-size: 200px;
+    line-height: 200px;
+    color: #333;
+    margin: 95px 0 95px 0;
+    font-family: "Gill Sans", serif;
+}
