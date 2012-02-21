@@ -12,9 +12,11 @@ $(document).ready(function() {
         $("#next").html("?");
         $("#next").attr("data-state", "ask");
 
-        var kana_id = parseInt(Math.random() * pref_range * 5);
+        var kana_range = pref_range * 5;
+        if (pref_range == 11) kana_range = 51;
+        var kana_id = parseInt(Math.random() * kana_range);
         while (kana_id == prev_id) {
-            kana_id = parseInt(Math.random() * pref_range * 5);
+            kana_id = parseInt(Math.random() * kana_range);
         }
         prev_id = kana_id;
         var which_right = parseInt(Math.random() * 4);
@@ -34,9 +36,9 @@ $(document).ready(function() {
             if (i == which_right) {
                 continue;
             }
-            var rand_id = parseInt(Math.random() * pref_range * 5);
+            var rand_id = parseInt(Math.random() * kana_range);
             while (used_id.indexOf(rand_id) >= 0) {
-                rand_id = parseInt(Math.random() * pref_range * 5);
+                rand_id = parseInt(Math.random() * kana_range);
             }
             used_id.push(rand_id);
             $($("#select button")[i]).html(ls[rand_id]);
@@ -44,7 +46,9 @@ $(document).ready(function() {
     }
     
     function update_range_func() {
-        $("#pref-range-text").html(pref_range);
+        var range_text = pref_range;
+        if (range_text == 11) range_text = "all";
+        $("#pref-range-text").html(range_text);
         reset_counter();
     }
     
@@ -102,7 +106,7 @@ $(document).ready(function() {
         get_next();
     });
     $("#pref-range-increase").click(function() {
-        if (pref_range >= 6) {
+        if (pref_range >= 11) {
             return;
         }
         pref_range++;
