@@ -1,12 +1,3 @@
-.kana-item {
-    float: left;
-    width: 86px;
-}
-.kana-char {
-    font-size: 32px;
-    line-height: 60px;
-    font-family: "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "Kochi Mincho", "MS Mincho", serif;
-}
 .kana-row {
     border-top: 1px solid #ccc;
     margin: 10px 0;
@@ -15,4 +6,36 @@
 .kana-row:first-child {
     padding-top: 0px;
     border: 0;
+}
+
+.kana-row-head {
+    width: 80px;
+    float: left;
+    padding-top: 20px;
+    margin-right: 10px;
+}
+.kana-row-head .kana-char {
+    font-size: 32px;
+    line-height: 32px;
+    padding: 10px;
+    font-weight: bold;
+    font-family: "Hiragino Kaku Gothic ProN", "Kochi Gothic", Meiryo, "MS Gothic", sans-serif;
+    border-radius: 10px;
+    background-color: #aaa;
+    color: #fff;
+}
+.kana-row-head .kana-alpha {
+    font-size: 20px;
+    line-height: 60px;
+    color: #666;
+}
+
+.kana-item {
+    float: left;
+    width: 68px;
+}
+.kana-item .kana-char {
+    font-size: 32px;
+    line-height: 60px;
+    font-family: "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "Kochi Mincho", "MS Mincho", serif;
 }
