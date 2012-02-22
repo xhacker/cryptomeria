@@ -7,6 +7,7 @@ ks = _ks.split("|");
 
 vs = [
     [
+        // a
         {"kana":"あい", "meaning":"love", "latin":"a i"},
         {"kana":"いう", "meaning":"say", "latin":"i u"},
         {"kana":"うえ", "meaning":"up", "latin":"u e"},
@@ -22,6 +23,7 @@ vs = [
         {"kana":"エア", "meaning":"air", "latin":"e a"}
     ],
     [
+        // ka
         {"kana":"いか", "meaning":"squid", "latin":"i ga"},
         {"kana":"かう", "meaning":"buy", "latin":"ka u"},
         {"kana":"おく", "meaning":"place", "latin":"o gu"},
@@ -42,6 +44,7 @@ vs = [
         {"kana":"こい", "meaning":"carp", "latin":"ko i"}
     ],
     [
+        // sa
         {"kana":"あさ", "meaning":"morning", "latin":"a sa"},
         {"kana":"アイス", "meaning":"ice", "latin":"a i su"},
         {"kana":"そこく", "meaning":"homeland", "latin":"so go gu"},
@@ -57,6 +60,7 @@ vs = [
         {"kana":"あし", "meaning":"foot", "latin":"a si"}
     ],
     [
+        // ta
         {"kana":"おたく", "meaning":"home", "latin":"o da gu"},
         {"kana":"ちかてつ", "meaning":"subway", "latin":"ci ga de zu"},
         {"kana":"たたかう", "meaning":"fight", "latin":"ta da ga u"},
@@ -73,6 +77,7 @@ vs = [
         {"kana":"ちかう", "meaning":"pledge", "latin":"qi ga u"}
     ],
     [
+        // na
         {"kana":"かない", "meaning":"wife", "latin":"ka na i"},
         {"kana":"なに", "meaning":"what", "latin":"na ni"},
         {"kana":"あなた", "meaning":"you", "latin":"a na da"},
@@ -92,6 +97,7 @@ vs = [
         {"kana":"きのこ", "meaning":"mushroom", "latin":"ki no go"}
     ],
     [
+        // ha
         {"kana":"はい", "meaning":"yes", "latin":"ha i"}, 
         {"kana":"はこ", "meaning":"box", "latin":"ha go"},
         {"kana":"ひふ", "meaning":"skin", "latin":"hi hu"},
@@ -117,13 +123,103 @@ vs = [
         {"kana":"ふくし", "meaning":"Fukushima", "latin":"hu gu si"}
     ],
     [
+        // ma
+        {"kana":"もも", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"むし", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"まめ", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"むすめ", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"むかし", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"まいにち", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"きみ", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"さむい", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"もの", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"むすこ", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"みこし", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"すまない", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"のみまの", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"かみさま", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"たかみ", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"もくてき", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"めめしい", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"ひみつ", "meaning":"miao", "latin":"mi a o"}
     ],
     [
+        // ya
+        {"kana":"やま", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"やおや", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"よやく", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"やみよ", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"ゆかひ", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"かゆひ", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"おゆ", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"よく", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"やさい", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"やすい", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"ひやく", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"もやし", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"もよおす", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"ゆかた", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"ゆたか", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"おかゆ", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"やさしい", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"やすみ", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"ゆうみけ", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"よこなき", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"よしあし", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"よくない", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"よのなか", "meaning":"miao", "latin":"mi a o"}
     ],
     [
+        // ra
+        {"kana":"はる", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"れきし", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"おふろ", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"きらい", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"るす", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"くもる", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"やるき", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"おさら", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"ろうそく", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"しつれい", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"きれい", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"しうない", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"ふろしき", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"おもしろい", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"たりる", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"ひれつ", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"あつまる", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"ならう", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"ふるい", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"すらりと", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"ふりかえる", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"きらく", "meaning":"miao", "latin":"mi a o"}
     ],
     [
+        // wa
+        {"kana":"わたし", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"かわ", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"わたいれ", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"すわる", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"わらろ", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"しわせ", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"きわめて", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"わすわる", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"わかす", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"おせわ", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"まわる", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"わける", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"やわらかい", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"くわえる", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"いわう", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"あらわす", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"わふく", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"わたる", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"さわる", "meaning":"miao", "latin":"mi a o"}
     ],
     [
+        // n/m
+        {"kana":"みあお", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"みあお", "meaning":"miao", "latin":"mi a o"},
+        {"kana":"みあお", "meaning":"miao", "latin":"mi a o"}
     ]
 ];

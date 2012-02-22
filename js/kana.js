@@ -7,19 +7,16 @@ $(document).ready(function() {
 
         // line head
         html += '<div class="kana-row-head">';
-        html += '<span class="kana-char">' + hs[i * 5] + '</span>';
-        html += '<br />';
-        html += '<span class="kana-alpha">' + ls[i * 5] + '</span>';
+        html += '<p class="kana-char">' + hs[i * 5] + '</p>';
+        html += '<p class="kana-alpha">' + ls[i * 5] + '</p>';
         html += '</div>';
 
         for (var j = 0; j < kana_per_line; j++) {
             var kana_id = i * 5 + j;
             html += '<div class="kana-item">';
-            html += '<span class="kana-char">' + hs[kana_id] + '</span>';
-            html += '<br />';
-            html += '<span class="kana-char">' + ks[kana_id] + '</span>';
-            html += '<br />';
-            html += '<span class="kana-alpha">' + ls[kana_id] + '</span>';
+            html += '<p class="kana-char">' + hs[kana_id] + '</p>';
+            html += '<p class="kana-char">' + ks[kana_id] + '</p>';
+            html += '<p class="kana-alpha">' + ls[kana_id] + '</p>';
             html += '</div>';
         }
         html += '</div>';

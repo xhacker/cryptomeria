@@ -4,15 +4,14 @@
     padding: 20px 10px;
 }
 .kana-row:first-child {
-    padding-top: 0px;
+    padding-top: 0;
     border: 0;
 }
 
 .kana-row-head {
-    width: 80px;
     float: left;
     padding-top: 20px;
-    margin-right: 10px;
+    margin: 10px 24px 0 16px;
 }
 .kana-row-head .kana-char {
     font-size: 32px;
@@ -23,11 +22,12 @@
     border-radius: 10px;
     background-color: #aaa;
     color: #fff;
+    float: left;
 }
 .kana-row-head .kana-alpha {
-    font-size: 20px;
-    line-height: 60px;
-    color: #666;
+    font-size: 22px;
+    line-height: 42px;
+    color: #777;
 }
 
 .kana-item {
@@ -35,7 +35,11 @@
     width: 68px;
 }
 .kana-item .kana-char {
-    font-size: 32px;
+    font-size: 36px;
     line-height: 60px;
     font-family: "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "Kochi Mincho", "MS Mincho", serif;
+}
+
+#content p {
+    margin: 0;
 }
