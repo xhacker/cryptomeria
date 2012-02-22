@@ -20,28 +20,33 @@ $(document).ready(function() {
     }
     $("#content").append(html);
 
-    $("#pref-direction button").click(function() {
-        var direction = $(this).attr("data-direction");
-        $("#pref-direction button.active").addClass("not-active");
-        $("#pref-direction button.active").removeClass("active");
-        $(this).addClass("active");
-        $(this).removeClass("not-active");
-        if (direction == "kanalatin") {
-            $(".latin").html("latin");
-            $(".latin").removeClass("active");
+    if (!localStorage['pref_direction']) { localStorage['pref_direction'] = "kanalatin"; }
+    on_direction_update();
+
+    function on_direction_update() {
+        var selector_this = "#pref-direction button[data-direction=" + localStorage['pref_direction'] + "]";
+        $("#pref-direction button.active").addClass("not-active").removeClass("active");
+        $(selector_this).addClass("active").removeClass("not-active");
+
+        if (localStorage['pref_direction'] == "kanalatin") {
+            $(".latin").html("latin").removeClass("active");
             $(".kana").each(function() {
                 $(this).html($(this).attr("data-kana"));
                 $(this).addClass("active");
             });
         }
         else {
-            $(".kana").html("kana");
-            $(".kana").removeClass("active");
+            $(".kana").html("kana").removeClass("active");
             $(".latin").each(function() {
                 $(this).html($(this).attr("data-latin"));
                 $(this).addClass("active");
             });
         }
+    }
+
+    $("#pref-direction button").click(function() {
+        localStorage['pref_direction'] = $(this).attr("data-direction");
+        on_direction_update();
     });
 
     $(".latin").click(function() {

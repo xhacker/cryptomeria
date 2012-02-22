@@ -1,7 +1,13 @@
 $(document).ready(function() {
-    pref_range = 1;
-    pref_hork = "h";
-    pref_direction = "kanalatin";
+    // load preferences
+    if (!localStorage['pref_range']) { localStorage['pref_range'] = 1; }
+    if (!localStorage['pref_hork']) { localStorage['pref_hork'] = "h"; }
+    if (!localStorage['pref_direction']) { localStorage['pref_direction'] = "kanalatin"; }
+
+    // init
+    on_range_update();
+    on_hork_update();
+    on_direction_update();
 
     var prev_id = -1;
     var prev_hork;
@@ -13,18 +19,18 @@ $(document).ready(function() {
         $("#next").html("?");
         $("#next").attr("data-state", "ask");
 
-        var kana_range = pref_range * 5;
-        if (pref_range == 11) kana_range = 51;
+        var kana_range = localStorage['pref_range'] * 5;
+        if (localStorage['pref_range'] == 11) kana_range = 51;
         var kana_id = parseInt(Math.random() * kana_range);
         while (kana_id == prev_id) {
             kana_id = parseInt(Math.random() * kana_range);
         }
         prev_id = kana_id;
 
-        if (pref_hork == "h") {
+        if (localStorage['pref_hork'] == "h") {
             hork = "h";
         }
-        else if (pref_hork == "k") {
+        else if (localStorage['pref_hork'] == "k") {
             hork = "k";
         }
         else {
@@ -32,7 +38,7 @@ $(document).ready(function() {
             prev_hork = hork;
         }
 
-        if (pref_direction == "kanalatin") {
+        if (localStorage['pref_direction'] == "kanalatin") {
             ch = (hork == "h") ? hs[kana_id] : ks[kana_id];
         }
         else {
@@ -42,7 +48,7 @@ $(document).ready(function() {
 
         var which_right = parseInt(Math.random() * 4);
         $("#next").attr("data-right", which_right);
-        if (pref_direction == "kanalatin") {
+        if (localStorage['pref_direction'] == "kanalatin") {
             right_ch = ls[kana_id];
         }
         else {
@@ -60,7 +66,7 @@ $(document).ready(function() {
                 rand_id = parseInt(Math.random() * kana_range);
             }
             used_id.push(rand_id);
-            if (pref_direction == "kanalatin") {
+            if (localStorage['pref_direction'] == "kanalatin") {
                 option_ch = ls[rand_id];
             }
             else {
@@ -70,10 +76,28 @@ $(document).ready(function() {
         }
     }
     
-    function update_range_func() {
-        var range_text = pref_range;
+    function on_range_update() {
+        var range_text = localStorage['pref_range'];
         if (range_text == 11) range_text = "all";
         $("#pref-range-text").html(range_text);
+        reset_counter();
+    }
+
+    function on_hork_update() {
+        var selector_this = "#pref-hork button[data-hork=" + localStorage['pref_hork'] + "]";
+        $("#pref-hork button.active").addClass("not-active").removeClass("active");
+        $(selector_this).addClass("active").removeClass("not-active");
+        reset_counter();
+    }
+
+    function on_direction_update() {
+        var selector_this = "#pref-direction button[data-direction=" + localStorage['pref_direction'] + "]";
+        $("#kana").removeClass("kana").removeClass("latin");
+        $("#kana").addClass($(selector_this).attr("data-main-display"));
+
+        $("#pref-direction button.active").addClass("not-active").removeClass("active");
+        $(selector_this).addClass("active").removeClass("not-active");
+
         reset_counter();
     }
     
@@ -123,42 +147,32 @@ $(document).ready(function() {
     });
     
     $("#pref-range-decrease").click(function() {
-        if (pref_range <= 1) {
+        if (localStorage['pref_range'] <= 1) {
             return;
         }
-        pref_range--;
-        update_range_func();
+        localStorage['pref_range']--;
+        on_range_update();
         get_next();
     });
     $("#pref-range-increase").click(function() {
-        if (pref_range >= 11) {
+        if (localStorage['pref_range'] >= 11) {
             return;
         }
-        pref_range++;
-        update_range_func();
+        localStorage['pref_range']++;
+        on_range_update();
         get_next();
     });
     
     // `hork` means `hiragana or katakana`.
     $("#pref-hork button").click(function() {
-        pref_hork = $(this).attr("data-hork");
-        $("#pref-hork button.active").addClass("not-active");
-        $("#pref-hork button.active").removeClass("active");
-        $(this).addClass("active");
-        $(this).removeClass("not-active");
-        reset_counter();
+        localStorage['pref_hork'] = $(this).attr("data-hork");
+        on_hork_update();
         get_next();
     });
 
     $("#pref-direction button").click(function() {
-        pref_direction = $(this).attr("data-direction");
-        $("#kana").toggleClass("kana");
-        $("#kana").toggleClass("latin");
-        $("#pref-direction button.active").addClass("not-active");
-        $("#pref-direction button.active").removeClass("active");
-        $(this).addClass("active");
-        $(this).removeClass("not-active");
-        reset_counter();
+        localStorage['pref_direction'] = $(this).attr("data-direction");
+        on_direction_update();
         get_next();
     });
     
