@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cryptomeria - Remember Kana</title>
+    <meta charset="utf-8" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/remember.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+
+<body>
+    <p id="nav">
+        <a href="#" class="current">Remember Kana</a>
+        <a href="kana.html">Kana Chart</a>
+        <a href="vocabulary.html">Vocabulary</a>
+    </p>
+    <div id="content">
+        <div id="pref">
+            <p id="pref-range">
+                <button id="pref-range-decrease" class="blue control control-left">-</button>
+                <button id="pref-range-display" class="blue control control-mid text" title="Which lines are covered"><span id="pref-range-text">1</span></button>
+                <button id="pref-range-increase" class="blue control control-right">+</button>
+            </p>
+            <p id="pref-hork">
+                <button id="pref-hork-h" data-hork="h" class="blue control control-left active" title="Hiragana only">あ</button>
+                <button id="pref-hork-k" data-hork="k" class="blue control control-mid not-active" title="Katakana only">ア</button>
+                <button id="pref-hork-both" data-hork="both" class="blue control control-right not-active" title="Hiragana and katakana">あ+ア</button>
+            </p>
+            <p id="pref-direction">
+                <button id="pref-direction-kanalatin" data-direction="kanalatin" data-main-display="kana" class="blue control control-left active" title="Show kana, guess latin">あ→a</button>
+                <button id="pref-direction-latinkana" data-direction="latinkana" data-main-display="latin" class="blue control control-right not-active" title="Show latin, guess kana">a→あ</button>
+            </p>
+            <p id="counter"><span id="counter-ac">0</span> / <span id="counter-total">0</span></p>
+        </div>
+        <p id="kana" class="kana"></p>
+        <div id="select">
+            <button class="option blue" data-id="0">a</button>
+            <button class="option blue" data-id="1">i</button>
+            <button class="option blue" data-id="2">u</button>
+            <button class="option blue" data-id="3">e</button>
+            <button id="next" class="green" data-state="ask">?</button>
+        </div>
+    </div>
+</body>
+
+</html>

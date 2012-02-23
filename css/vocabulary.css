@@ -1,22 +1,23 @@
 body {
     width: 540px;
 }
+
+#pref {
+}
 #link {
     font-family: "Hiragino Kaku Gothic ProN", "Kochi Gothic", Meiryo, "MS Gothic", sans-serif;
     font-size: 18px;
-    margin: 0 0 0 6px;
-    float: left;
+    margin: 16px 0 0 0;
+    text-align: center;
 }
 #link a {
-    margin: 0 3px;
+    margin: 0 2px;
     color: #666;
 }
 #link a:hover {
     color: #000;
 }
-#pref {
-    float: right;
-}
+
 .vocabulary-row {
     border-top: 1px solid #ccc;
     margin: 10px 0;

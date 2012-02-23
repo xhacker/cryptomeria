@@ -77,8 +77,8 @@ $(document).ready(function() {
     }
     
     function on_range_update() {
-        var range_text = localStorage['pref_range'];
-        if (range_text == 11) range_text = "all";
+        var range = localStorage['pref_range'];
+        var range_text = 'あ-' + hs[(range - 1) * 5];
         $("#pref-range-text").html(range_text);
         reset_counter();
     }

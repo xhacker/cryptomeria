@@ -1,3 +1,6 @@
+body {
+    width: 523px;
+}
 #counter {
     display: none;
     color: #666;
