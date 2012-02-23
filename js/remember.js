@@ -22,7 +22,7 @@ $(document).ready(function() {
         var kana_range = localStorage['pref_range'] * 5;
         if (localStorage['pref_range'] == 11) kana_range = 51;
         var kana_id = parseInt(Math.random() * kana_range);
-        while (kana_id == prev_id) {
+        while (kana_id == prev_id || hs[kana_id][0] == '(') {
             kana_id = parseInt(Math.random() * kana_range);
         }
         prev_id = kana_id;
@@ -62,7 +62,7 @@ $(document).ready(function() {
                 continue;
             }
             var rand_id = parseInt(Math.random() * kana_range);
-            while (used_id.indexOf(rand_id) >= 0) {
+            while (used_id.indexOf(rand_id) >= 0 || ls[rand_id][0] == '(') {
                 rand_id = parseInt(Math.random() * kana_range);
             }
             used_id.push(rand_id);
