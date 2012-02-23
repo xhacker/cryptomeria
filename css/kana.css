@@ -34,6 +34,9 @@
     float: left;
     width: 68px;
 }
+.dup {
+    color: #aaa;
+}
 .kana-item .kana-char {
     font-size: 36px;
     line-height: 60px;

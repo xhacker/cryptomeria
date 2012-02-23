@@ -13,7 +13,9 @@ $(document).ready(function() {
 
         for (var j = 0; j < kana_per_line; j++) {
             var kana_id = i * 5 + j;
-            html += '<div class="kana-item">';
+            var dup_class = "";
+            if (hs[kana_id][0] == '(') { dup_class = " dup"; }
+            html += '<div class="kana-item' + dup_class + '">';
             html += '<p class="kana-char">' + hs[kana_id] + '</p>';
             html += '<p class="kana-char">' + ks[kana_id] + '</p>';
             html += '<p class="kana-alpha">' + ls[kana_id] + '</p>';
