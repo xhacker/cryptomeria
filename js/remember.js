@@ -8,8 +8,19 @@ $(document).ready(function() {
     on_range_update();
     on_hork_update();
     on_direction_update();
+    randomize();
 
-    var prev_id = -1;
+    function randomize() {
+        kana_range = localStorage['pref_range'] * 5;
+        if (localStorage['pref_range'] == 11) kana_range = 51;
+
+        id_array = new Array;
+        id_pointer = 0;
+        for (var i = 0; i < kana_range; i++)
+            id_array[i] = i;
+        id_array.sort(function() { return 0.5 - Math.random(); });
+    }
+
     var prev_hork;
     function get_next() {
         $("#select button.option.green").addClass("blue");
@@ -19,13 +30,14 @@ $(document).ready(function() {
         $("#next").html("?");
         $("#next").attr("data-state", "ask");
 
-        var kana_range = localStorage['pref_range'] * 5;
-        if (localStorage['pref_range'] == 11) kana_range = 51;
-        var kana_id = parseInt(Math.random() * kana_range);
-        while (kana_id == prev_id || hs[kana_id][0] == '(') {
-            kana_id = parseInt(Math.random() * kana_range);
+        var kana_id = id_array[id_pointer++];
+        if (kana_id == undefined) {
+            randomize();
+            kana_id = id_array[id_pointer++];
         }
-        prev_id = kana_id;
+        while (hs[kana_id][0] == '(') {
+            kana_id = id_array[id_pointer++];
+        }
 
         if (localStorage['pref_hork'] == "h") {
             hork = "h";
@@ -81,6 +93,8 @@ $(document).ready(function() {
         var range_text = 'あ-' + hs[(range - 1) * 5];
         $("#pref-range-text").html(range_text);
         reset_counter();
+        randomize();
+        get_next();
     }
 
     function on_hork_update() {
@@ -88,6 +102,8 @@ $(document).ready(function() {
         $("#pref-hork button.active").addClass("not-active").removeClass("active");
         $(selector_this).addClass("active").removeClass("not-active");
         reset_counter();
+        randomize();
+        get_next();
     }
 
     function on_direction_update() {
@@ -99,6 +115,8 @@ $(document).ready(function() {
         $(selector_this).addClass("active").removeClass("not-active");
 
         reset_counter();
+        randomize();
+        get_next();
     }
     
     function reset_counter() {
@@ -152,7 +170,6 @@ $(document).ready(function() {
         }
         localStorage['pref_range']--;
         on_range_update();
-        get_next();
     });
     $("#pref-range-increase").click(function() {
         if (localStorage['pref_range'] >= 11) {
@@ -160,20 +177,17 @@ $(document).ready(function() {
         }
         localStorage['pref_range']++;
         on_range_update();
-        get_next();
     });
     
     // `hork` means `hiragana or katakana`.
     $("#pref-hork button").click(function() {
         localStorage['pref_hork'] = $(this).attr("data-hork");
         on_hork_update();
-        get_next();
     });
 
     $("#pref-direction button").click(function() {
         localStorage['pref_direction'] = $(this).attr("data-direction");
         on_direction_update();
-        get_next();
     });
     
     get_next();
