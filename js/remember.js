@@ -1,8 +1,8 @@
 $(document).ready(function() {
     // load preferences
-    if (!localStorage['pref_range']) { localStorage['pref_range'] = 1; }
-    if (!localStorage['pref_hork']) { localStorage['pref_hork'] = "h"; }
-    if (!localStorage['pref_direction']) { localStorage['pref_direction'] = "kanalatin"; }
+    if (!localStorage.pref_range) { localStorage.pref_range = 1; }
+    if (!localStorage.pref_hork) { localStorage.pref_hork = "h"; }
+    if (!localStorage.pref_direction) { localStorage.pref_direction = "kanalatin"; }
 
     // init
     on_range_update();
@@ -11,8 +11,8 @@ $(document).ready(function() {
     randomize();
 
     function randomize() {
-        kana_range = localStorage['pref_range'] * 5;
-        if (localStorage['pref_range'] == 11) kana_range = 51;
+        kana_range = localStorage.pref_range * 5;
+        if (localStorage.pref_range == 11) kana_range = 51;
 
         id_array = new Array;
         id_pointer = 0;
@@ -31,7 +31,7 @@ $(document).ready(function() {
         $("#next").attr("data-state", "ask");
 
         var kana_id = id_array[id_pointer++];
-        if (kana_id == undefined) {
+        if (kana_id === undefined) {
             randomize();
             kana_id = id_array[id_pointer++];
         }
@@ -39,10 +39,10 @@ $(document).ready(function() {
             kana_id = id_array[id_pointer++];
         }
 
-        if (localStorage['pref_hork'] == "h") {
+        if (localStorage.pref_hork == "h") {
             hork = "h";
         }
-        else if (localStorage['pref_hork'] == "k") {
+        else if (localStoragepref_hork == "k") {
             hork = "k";
         }
         else {
@@ -50,7 +50,7 @@ $(document).ready(function() {
             prev_hork = hork;
         }
 
-        if (localStorage['pref_direction'] == "kanalatin") {
+        if (localStorage.pref_direction == "kanalatin") {
             ch = (hork == "h") ? hs[kana_id] : ks[kana_id];
         }
         else {
@@ -58,9 +58,9 @@ $(document).ready(function() {
         }
         $("#kana").html(ch);
 
-        var which_right = parseInt(Math.random() * 4);
+        var which_right = parseInt(Math.random() * 4, 10);
         $("#next").attr("data-right", which_right);
-        if (localStorage['pref_direction'] == "kanalatin") {
+        if (localStorage.pref_direction == "kanalatin") {
             right_ch = ls[kana_id];
         }
         else {
@@ -73,12 +73,12 @@ $(document).ready(function() {
             if (i == which_right) {
                 continue;
             }
-            var rand_id = parseInt(Math.random() * kana_range);
+            var rand_id = parseInt(Math.random() * kana_range, 10);
             while (used_id.indexOf(rand_id) >= 0 || ls[rand_id][0] == '(') {
-                rand_id = parseInt(Math.random() * kana_range);
+                rand_id = parseInt(Math.random() * kana_range, 10);
             }
             used_id.push(rand_id);
-            if (localStorage['pref_direction'] == "kanalatin") {
+            if (localStorage.pref_direction == "kanalatin") {
                 option_ch = ls[rand_id];
             }
             else {
