@@ -6,7 +6,7 @@ youon_line = [16, 25];
 
 _ls = "a|i|u|e|o|ka|ki|ku|ke|ko|sa|si|su|se|so|ta|ci|cu|te|to|na|ni|nu|ne|no|ha|hi|hu|he|ho|ma|mi|mu|me|mo|ya|(i)|yu|(e)|yo|ra|ri|ru|re|ro|wa|(i)|(u)|(e)|o|n/m|||||ga|gi|gu|ge|go|za|zi|zu|ze|zo|da|zi|zu|de|do|ba|bi|bu|be|bo|pa|pi|pu|pe|po|kya|kyu|kyo|||gya|gyu|gyo|||sha|shu|sho|||ja|ju|jo|||cha|chu|cho|||nya|nyu|nyo|||hya|hyu|hyo|||bya|byu|byo|||pya|pyu|pyo|||mya|myu|myo";
 _hs = "あ|い|う|え|お|か|き|く|け|こ|さ|し|す|せ|そ|た|ち|つ|て|と|な|に|ぬ|ね|の|は|ひ|ふ|へ|ほ|ま|み|む|め|も|や|(い)|ゆ|(え)|よ|ら|り|る|れ|ろ|わ|(い)|(う)|(え)|を|ん|||||が|ぎ|ぐ|げ|ご|ざ|じ|ず|ぜ|ぞ|だ|ぢ|づ|で|ど|ば|び|ぶ|べ|ぼ|ぱ|ぴ|ぷ|ぺ|ぽ|きゃ|きゅ|きょ|||ぎゃ|ぎゅ|ぎょ|||しゃ|しゅ|しょ|||じゃ|じゅ|じょ|||ちゃ|ちゅ|ちょ|||ちゃ|ちゅ|ちょ|||にゃ|にゅ|にょ|||ひゃ|ひゅ|ひょ|||びゃ|びゅ|びょ|||ぴゃ|ぴゅ|ぴょ|||みゃ|みゅ|みょ||";
-_ks = "ア|イ|ウ|エ|オ|カ|キ|ク|ケ|コ|サ|シ|ス|セ|ソ|タ|チ|ツ|テ|ト|ナ|ニ|ヌ|ネ|ノ|ハ|ヒ|フ|ヘ|ホ|マ|ミ|ム|メ|モ|ヤ|(イ)|ユ|(エ)|ヨ|ラ|リ|ル|レ|ロ|ワ|(イ)|(ウ)|(エ)|ヲ|ン|||||ガ|ギ|グ|ゲ|ゴ|ザ|ジ|ズ|ゼ|ゾ|ダ|ヂ|ヅ|デ|ド|バ|ビ|ブ|ベ|ボ|パ|ピ|プ|ペ|ポ|キャ|キュ|キョ|||キャ|キュ|キョ|||ギャ|ギュ|ギョ|||シャ|シュ|ショ|||ジャ|ジュ|ジョ|||ちゃ|ちゅ|ちょ|||にゃ|にゅ|にょ|||ひゃ|ひゅ|ひょ|||びゃ|びゅ|びょ|||ぴゃ|ぴゅ|ぴょ|||みゃ|みゅ|みょ||";
+_ks = "ア|イ|ウ|エ|オ|カ|キ|ク|ケ|コ|サ|シ|ス|セ|ソ|タ|チ|ツ|テ|ト|ナ|ニ|ヌ|ネ|ノ|ハ|ヒ|フ|ヘ|ホ|マ|ミ|ム|メ|モ|ヤ|(イ)|ユ|(エ)|ヨ|ラ|リ|ル|レ|ロ|ワ|(イ)|(ウ)|(エ)|ヲ|ン|||||ガ|ギ|グ|ゲ|ゴ|ザ|ジ|ズ|ゼ|ゾ|ダ|ヂ|ヅ|デ|ド|バ|ビ|ブ|ベ|ボ|パ|ピ|プ|ペ|ポ|キャ|キュ|キョ|||キャ|キュ|キョ|||ギャ|ギュ|ギョ|||シャ|シュ|ショ|||ジャ|ジュ|ジョ|||チャ|チュ|チョ|||ニャ|ニュ|ニョ|||ヒャ|ヒュ|ヒョ|||ビャ|ビュ|ビョ|||ピャ|ピュ|ピョ|||ミャ|ミュ|ミョ||";
 ls = _ls.split("|");
 hs = _hs.split("|");
 ks = _ks.split("|");
@@ -34,9 +34,9 @@ vs = [
         {"kana":"かう", "meaning":"buy", "latin":"ka u"},
         {"kana":"おく", "meaning":"place", "latin":"o gu"},
         {"kana":"ここ", "meaning":"here", "latin":"ko go"},
-        {"kana":"かかく", "meaning":"price", "latin":"ka ga gu"},
         {"kana":"きかい", "meaning":"opportunity", "latin":"ki ga i"},
         {"kana":"きこく", "meaning":"return", "latin":"ki go gu"},
+        {"kana":"かかく", "meaning":"price", "latin":"ka ga gu"},
         {"kana":"かお", "meaning":"face", "latin":"ka o"},
         {"kana":"きく", "meaning":"listen", "latin":"ki gu"},
         {"kana":"きおく", "meaning":"memory", "latin":"ki o gu"},
@@ -52,12 +52,12 @@ vs = [
     [
         // sa
         {"kana":"あさ", "meaning":"morning", "latin":"a sa"},
-        {"kana":"アイス", "meaning":"ice", "latin":"a i su"},
         {"kana":"そこく", "meaning":"homeland", "latin":"so go gu"},
-        {"kana":"しあい", "meaning":"game", "latin":"si a i"},
-        {"kana":"しお", "meaning":"salt", "latin":"si o"},
         {"kana":"すいか", "meaning":"watermelon", "latin":"su i ga"},
         {"kana":"せかい", "meaning":"world", "latin":"se ga i"},
+        {"kana":"しあい", "meaning":"game", "latin":"si a i"},
+        {"kana":"しお", "meaning":"salt", "latin":"si o"},
+        {"kana":"アイス", "meaning":"ice", "latin":"a i su"},
         {"kana":"きせき", "meaning":"miracle", "latin":"ki se gi"},
         {"kana":"あさい", "meaning":"shallow", "latin":"a sa i"},
         {"kana":"きそ", "meaning":"basis", "latin":"ki so"},
@@ -71,6 +71,7 @@ vs = [
         {"kana":"ちかてつ", "meaning":"subway", "latin":"ci ga de zu"},
         {"kana":"たたかう", "meaning":"fight", "latin":"ta da ga u"},
         {"kana":"きたい", "meaning":"expect", "latin":"ki da i"},
+        {"kana":"とけい", "meaning":"watch", "latin":"to ge i"},
         {"kana":"ちかく", "meaning":"near", "latin":"ci ga gu"},
         {"kana":"ちしき", "meaning":"knowledge", "latin":"ci si gi"},
         {"kana":"あいて", "meaning":"opponent", "latin":"a i de"},
@@ -78,7 +79,6 @@ vs = [
         {"kana":"あと", "meaning":"later", "latin":"a do"},
         {"kana":"いたい", "meaning":"painful", "latin":"i da i"},
         {"kana":"とち", "meaning":"land", "latin":"to ji"},
-        {"kana":"とけい", "meaning":"watch", "latin":"to ge i"},
         {"kana":"いと", "meaning":"intent", "latin":"i do"},
         {"kana":"ちかう", "meaning":"pledge", "latin":"qi ga u"}
     ],
@@ -86,19 +86,19 @@ vs = [
         // na
         {"kana":"かない", "meaning":"wife", "latin":"ka na i"},
         {"kana":"なに", "meaning":"what", "latin":"na ni"},
+        {"kana":"ねこ", "meaning":"cat", "latin":"ne go"},
+        {"kana":"ぬの", "meaning":"cloth", "latin":"nu no"},
         {"kana":"あなた", "meaning":"you", "latin":"a na da"},
+        {"kana":"のこす", "meaning":"leave", "latin":"no go su"},
         {"kana":"にあう", "meaning":"match", "latin":"ni a u"},
         {"kana":"きぬ", "meaning":"silk", "latin":"ki nu"},
         {"kana":"きたない", "meaning":"dirty", "latin":"ki da na i"},
-        {"kana":"ぬの", "meaning":"cloth", "latin":"nu no"},
         {"kana":"きのう", "meaning":"yesterday", "latin":"ki no u"},
         {"kana":"さかな", "meaning":"fish", "latin":"sa ga na"},
         {"kana":"なく", "meaning":"cry", "latin":"na gu"},
         {"kana":"にく", "meaning":"meat", "latin":"ni gu"},
         {"kana":"いぬ", "meaning":"dog", "latin":"i nu"},
-        {"kana":"ねこ", "meaning":"cat", "latin":"ne go"},
         {"kana":"くに", "meaning":"country", "latin":"ku ni"},
-        {"kana":"のこす", "meaning":"leave", "latin":"no go su"},
         {"kana":"ぬく", "meaning":"pull", "latin":"nu gu"},
         {"kana":"きのこ", "meaning":"mushroom", "latin":"ki no go"}
     ],
@@ -107,9 +107,9 @@ vs = [
         {"kana":"はい", "meaning":"yes", "latin":"ha i"}, 
         {"kana":"はこ", "meaning":"box", "latin":"ha go"},
         {"kana":"ひふ", "meaning":"skin", "latin":"hi hu"},
-        {"kana":"ふかい", "meaning":"deep", "latin":"hu ga i"},
         {"kana":"ほそい", "meaning":"thin", "latin":"ho so i"},
         {"kana":"へいたい", "meaning":"soldier", "latin":"he i da i"},
+        {"kana":"ふかい", "meaning":"deep", "latin":"hu ga i"},
         {"kana":"ひくい", "meaning":"low", "latin":"hi gu i"},
         {"kana":"ひかく", "meaning":"comparison", "latin":"hi ga gu"},
         {"kana":"はち", "meaning":"bee", "latin":"ha zi"},
@@ -134,13 +134,13 @@ vs = [
         {"kana":"むし", "meaning":"insect", "latin":"mu si"},
         {"kana":"まめ", "meaning":"beans", "latin":"ma me"},
         {"kana":"むすめ", "meaning":"daughter", "latin":"mu su me"},
+        {"kana":"かみさま", "meaning":"god", "latin":"ka mi sa ma"},
         {"kana":"まいにち", "meaning":"every day", "latin":"ma i ni ji"},
         {"kana":"きみ", "meaning":"kid", "latin":"ki mi"},
         {"kana":"さむい", "meaning":"cold", "latin":"sa mu i"},
         {"kana":"もの", "meaning":"thing", "latin":"mo no"},
         {"kana":"むすこ", "meaning":"son", "latin":"mu su go"},
         {"kana":"すまない", "meaning":"sorry", "latin":"su ma na i"},
-        {"kana":"かみさま", "meaning":"god", "latin":"ka mi sa ma"},
         {"kana":"もくてき", "meaning":"purpose", "latin":"mo gu ze gi"},
         {"kana":"めめしい", "meaning":"pussy", "latin":"me me si i"},
         {"kana":"ひみつ", "meaning":"secret", "latin":"he mi zu"}
@@ -173,11 +173,11 @@ vs = [
     ],
     [
         // ra
-        // TODO: more ri
         {"kana":"はる", "meaning":"spring", "latin":"ha ru"},
         {"kana":"れきし", "meaning":"history", "latin":"re gi si"},
         {"kana":"おふろ", "meaning":"miao", "latin":"o hu ro"},
         {"kana":"きらい", "meaning":"hate", "latin":"ki ra i"},
+        {"kana":"たりる", "meaning":"sufficient", "latin":"ta ri ru"},
         {"kana":"るす", "meaning":"miao", "latin":"ru si"},
         {"kana":"くもる", "meaning":"cloudy", "latin":"ku mo ru"},
         {"kana":"やるき", "meaning":"miao", "latin":"ya ru gi"},
@@ -187,7 +187,6 @@ vs = [
         {"kana":"きれい", "meaning":"pretty", "latin":"ki re i"},
         {"kana":"ふろしき", "meaning":"wrapping cloth", "latin":"fo ro si gi"},
         {"kana":"おもしろい", "meaning":"funny", "latin":"o mo si ro i"},
-        {"kana":"たりる", "meaning":"sufficient", "latin":"ta ri ru"},
         {"kana":"ひれつ", "meaning":"despicable", "latin":"hi re zu"},
         {"kana":"あつまる", "meaning":"gather", "latin":"a zu ma ru"},
         {"kana":"ならう", "meaning":"learn", "latin":"na ra u"},
