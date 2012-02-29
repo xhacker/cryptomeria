@@ -88,3 +88,17 @@ body {
     border: 0;
     cursor: auto;
 }
+
+.more {
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #ccc;
+    color: #fff;
+    padding: 5px 15px;
+    float: left;
+    cursor: pointer;
+}
+.more:hover {
+    background-color: #bbb;
+}

@@ -12,12 +12,14 @@ $(document).ready(function() {
 
     function randomize() {
         kana_range = localStorage.pref_range * 5;
-        if (localStorage.pref_range == 11) kana_range = 51;
 
         id_array = new Array;
         id_pointer = 0;
-        for (var i = 0; i < kana_range; i++)
-            id_array[i] = i;
+        for (var array_i = 0, kana_i = 0; kana_i < kana_range; kana_i++) {
+            if (hs[kana_i] && hs[kana_i][0] != '(') {
+                id_array[array_i++] = kana_i;
+            }
+        }
         id_array.sort(function() { return 0.5 - Math.random(); });
     }
 
@@ -33,9 +35,6 @@ $(document).ready(function() {
         var kana_id = id_array[id_pointer++];
         if (kana_id === undefined) {
             randomize();
-            kana_id = id_array[id_pointer++];
-        }
-        while (hs[kana_id][0] == '(') {
             kana_id = id_array[id_pointer++];
         }
 
@@ -172,7 +171,7 @@ $(document).ready(function() {
         on_range_update();
     });
     $("#pref-range-increase").click(function() {
-        if (localStorage['pref_range'] >= 11) {
+        if (localStorage['pref_range'] >= total_line) {
             return;
         }
         localStorage['pref_range']++;
