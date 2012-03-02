@@ -12,7 +12,7 @@
 
   "app": {
     "launch": {
-      "local_path": "remember.html"
+      "local_path": "index.html"
     }
   },
 
