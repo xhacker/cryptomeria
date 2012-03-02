@@ -1,3 +1,8 @@
+// get a random integer between a and b
+function randint(a, b) {
+    return Math.floor(Math.random() * (b - a + 1) + a, 10);
+}
+
 $(document).ready(function() {
     // load preferences
     if (!localStorage.pref_range) { localStorage.pref_range = 1; }
@@ -57,7 +62,8 @@ $(document).ready(function() {
         }
         $("#kana").html(ch);
 
-        var which_right = parseInt(Math.random() * 4, 10);
+        // place options
+        var which_right = randint(0, 3);
         $("#next").attr("data-right", which_right);
         if (localStorage.pref_direction == "kanalatin") {
             right_ch = ls[kana_id];
@@ -72,9 +78,9 @@ $(document).ready(function() {
             if (i == which_right) {
                 continue;
             }
-            var rand_id = parseInt(Math.random() * kana_range, 10);
-            while (used_id.indexOf(rand_id) >= 0 || ls[rand_id][0] == '(') {
-                rand_id = parseInt(Math.random() * kana_range, 10);
+            var rand_id = randint(0, kana_range - 1);
+            while (used_id.indexOf(rand_id) >= 0 || !ls[rand_id] || ls[rand_id][0] == '(') {
+                rand_id = randint(0, kana_range - 1);
             }
             used_id.push(rand_id);
             if (localStorage.pref_direction == "kanalatin") {
