@@ -113,8 +113,7 @@ $(document).ready(function() {
 
     function on_direction_update() {
         var selector_this = "#pref-direction button[data-direction=" + localStorage['pref_direction'] + "]";
-        $("#kana").removeClass("kana").removeClass("latin");
-        $("#kana").addClass($(selector_this).attr("data-main-display"));
+        $("#kana").attr("lang", $(selector_this).attr("data-main-display"));
 
         $("#pref-direction button.active").addClass("not-active").removeClass("active");
         $(selector_this).addClass("active").removeClass("not-active");

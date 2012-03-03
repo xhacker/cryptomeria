@@ -1,28 +1,14 @@
-body {
-    width: 523px;
-}
-#counter {
-    display: none;
+h1 span[lang=en] {
+    font-family: "Myriad Pro";
+    font-weight: 300;
     color: #666;
-    padding-top: 4px;
-    float: right;
-    font-size: 15px;
-    line-height: 15px;
+    font-size: 22px;
 }
-#counter-ac {
-    color: #679920;
-}
-.kana {
-    font-size: 180px;
-    line-height: 180px;
-    color: #333;
-    margin: 120px 0 90px 0;
-    font-family: "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "Kochi Mincho", "MS Mincho", serif;
-}
-.latin {
-    font-size: 190px;
-    line-height: 190px;
-    color: #333;
-    margin: 100px 0 100px 0;
-    font-family: "Gill Sans", "Segoe UI", "Lucida Sans Unicode", Verdana, sans-serif;
+
+h1 span[lang=jp] {
+    font-family: "M+ 1c";
+    font-weight: 400;
+    color: #222;
+    font-size: 44px;
+    line-height: 80px;
 }
