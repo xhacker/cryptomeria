@@ -199,7 +199,7 @@ button.red:not(.active):not(.not-active):not(.text):hover {
 #page-chart .kana-item .kana-char {
   font-size: 36px;
   line-height: 60px;
-  font-family: Georgia, "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "Kochi Mincho", "MS Mincho", serif;
+  font-family: "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "Kochi Mincho", "MS Mincho", serif;
 }
 #page-chart #content p {
   margin: 0;
@@ -223,7 +223,7 @@ button.red:not(.active):not(.not-active):not(.text):hover {
   line-height: 180px;
   color: #333;
   margin: 120px 0 90px 0;
-  font-family: Georgia, "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "Kochi Mincho", "MS Mincho", serif;
+  font-family: "Kozuka Mincho Pr6N", "Hiragino Mincho ProN", "Kochi Mincho", "MS Mincho", serif;
 }
 #page-test #kana[lang=en] {
   font-size: 190px;
