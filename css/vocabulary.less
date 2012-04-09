@@ -1,0 +1,104 @@
+#page-vocabulary {
+    width: 540px;
+    
+    #pref {
+    }
+    #link {
+        font-family: @JapaneseGothicFontFamily;
+        font-size: 18px;
+        margin: 16px 0 0 0;
+        text-align: center;
+    }
+    #link a {
+        margin: 0 2px;
+        color: #666;
+    }
+    #link a:hover {
+        color: #000;
+    }
+    
+    .vocabulary-row {
+        border-top: 1px solid #ccc;
+        margin: 10px 0;
+        padding: 20px 10px;
+        text-align: left;
+    }
+    .title {
+        float: left;
+        font-family: @JapaneseGothicFontFamily;
+        padding: 0;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 36px;
+        margin: 0 28px 0 0;
+        color: #999;
+    }
+    .title p {
+        padding: 10px;
+        margin: 0;
+    }
+    .title p:first-child {
+        border-radius: 10px;
+        background-color: #aaa;
+        color: #fff;
+        margin-bottom: 5px;
+    }
+    .vocabulary {
+        float: left;
+    }
+    .vocabulary p {
+        margin: 0;
+    }
+    .vocabulary .kana {
+        font-family: @JapaneseMinchoFontFamily;
+        color: #444;
+        font-size: 32px;
+        line-height: 64px;
+        margin-right: 10px;
+        border-bottom: 1px dashed #bbb;
+        cursor: pointer;
+    }
+    .vocabulary .kana:not(.active):hover {
+        color: #222;
+        border: 0;
+    }
+    .vocabulary .kana.active {
+        color: #000;
+        border: 0;
+        cursor: auto;
+    }
+    .vocabulary .meaning {
+        font-size: 20px;
+        color: #ccc;
+        margin-right: 12px;
+    }
+    .vocabulary .latin {
+        cursor: pointer;
+        color: #666;
+        border-bottom: 1px dashed #bbb;
+    }
+    .vocabulary .latin:not(.active):hover {
+        color: #444;
+        border: 0;
+    }
+    .vocabulary .latin.active {
+        font-size: 20px;
+        color: #666;
+        border: 0;
+        cursor: auto;
+    }
+    
+    .more {
+        border-radius: 12px;
+        font-size: 14px;
+        line-height: 14px;
+        background-color: #ccc;
+        color: #fff;
+        padding: 5px 15px;
+        float: left;
+        cursor: pointer;
+    }
+    .more:hover {
+        background-color: #bbb;
+    }
+}
