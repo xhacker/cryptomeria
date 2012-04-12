@@ -16,7 +16,7 @@ $(document).ready(function() {
     randomize();
 
     function randomize() {
-        kana_range = localStorage.pref_range * 5;
+        kana_range = parseInt(localStorage.pref_range) * 5;
 
         id_array = new Array;
         id_pointer = 0;
@@ -94,7 +94,7 @@ $(document).ready(function() {
     }
     
     function on_range_update() {
-        var range = localStorage.pref_range;
+        var range = parseInt(localStorage.pref_range);
         var range_text = 'あ-' + hs[(range - 1) * 5];
         $("#pref-range-text").html(range_text);
         reset_counter();
@@ -169,17 +169,17 @@ $(document).ready(function() {
     });
     
     $("#pref-range-decrease").click(function() {
-        if (localStorage.pref_range <= 1) {
+        if (parseInt(localStorage.pref_range) <= 1) {
             return;
         }
-        localStorage.pref_range -= 1;
+        localStorage.pref_range = parseInt(localStorage.pref_range) - 1;
         on_range_update();
     });
     $("#pref-range-increase").click(function() {
-        if (localStorage.pref_range >= total_line) {
+        if (parseInt(localStorage.pref_range) >= total_line) {
             return;
         }
-        localStorage.pref_range += 1;
+        localStorage.pref_range = parseInt(localStorage.pref_range) + 1;
         on_range_update();
     });
     
