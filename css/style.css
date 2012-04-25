@@ -149,7 +149,7 @@ button.red:not(.active):not(.not-active):not(.text):hover {
   color: #666;
   font-size: 22px;
 }
-#page-index h1 span[lang=jp] {
+#page-index h1 span[lang=ja] {
   font-family: "M+ 1c", "Hiragino Kaku Gothic ProN", "Kochi Gothic", Meiryo, "MS Gothic", sans-serif;
   font-weight: 400;
   color: #222;
@@ -218,7 +218,7 @@ button.red:not(.active):not(.not-active):not(.text):hover {
 #page-test #counter-ac {
   color: #679920;
 }
-#page-test #kana[lang=jp] {
+#page-test #kana[lang=ja] {
   font-size: 180px;
   line-height: 180px;
   color: #333;
