@@ -2,6 +2,7 @@ $(document).ready(function() {
     var html = "";
     for (var i = 0; i < 11; i++) {
         html += '<div class="vocabulary-row clearfix" id="' + ls[i * 5] + '">';
+        
         html += '<div class="title">';
         for (var j = 0; j < 5; j++) {
             var kana = hs[i * 5 + j];
@@ -14,16 +15,22 @@ $(document).ready(function() {
             html += "<p>" + kana + "</p>";
         }
         html += '</div>'
-        html += '<div class="vocabulary">';
-        $.each(vs[i], function(index, value) {
-            if (index == 5) {
-                html += '<p class="more">Show more...</p>';
-            };
-            html += '<p><span class="kana active" data-kana="' + value.kana + '">';
-            html += value.kana + '</span><span class="meaning">' + value.meaning;
-            html += '</span><span class="latin" data-latin="' + value.latin + '">latin</span></p>';
-        });
-        html += '</div>'
+        
+        var vocabulary_view = {};
+        vocabulary_view.rows = vs[i];
+        if (vocabulary_view.rows[5])
+            vocabulary_view.rows[5].fifth = true;
+        html += Mustache.render('<div class="vocabulary">\
+            {{#rows}}\
+            {{#fifth}}<p class="more">Show more...</p>{{/fifth}}\
+            <p>\
+                <span class="kana active" data-kana="{{ kana }}">{{ kana }}</span>\
+                <span class="meaning">{{ meaning }}</span>\
+                <span class="latin" data-latin="{{ latin }}">latin</span>\
+            </p>\
+            {{/rows}}\
+        </div>', vocabulary_view);
+        
         html += '</div>';
     }
     $("#content").append(html);

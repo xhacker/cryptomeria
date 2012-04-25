@@ -8,10 +8,14 @@ $(document).ready(function() {
         html += '<div class="kana-row clearfix ' + type_class + '">';
 
         // line head
-        html += '<div class="kana-row-head">';
-        html += '<p class="kana-char">' + hs[i * 5] + '</p>';
-        html += '<p class="kana-alpha">' + ls[i * 5] + '</p>';
-        html += '</div>';
+        var head_view = {
+            kana_char: hs[i * 5],
+            kana_alpha: ls[i * 5]
+        };
+        html += Mustache.render('<div class="kana-row-head">\
+            <p class="kana-char">{{ kana_char }}</p>\
+            <p class="kana-alpha">{{ kana_alpha }}</p>\
+        </div>', head_view);
 
         for (var j = 0; j < 5; j++) {
             var kana_id = i * 5 + j;
@@ -20,16 +24,19 @@ $(document).ready(function() {
                 continue;
             }
             
-            var dup_class = "";
-            if (hs[kana_id][0] == '(') {
-                dup_class = " dup";
-            }
-            
-            html += '<div class="kana-item' + dup_class + '">';
-            html += '<p class="kana-char">' + hs[kana_id] + '</p>';
-            html += '<p class="kana-char">' + ks[kana_id] + '</p>';
-            html += '<p class="kana-alpha">' + ls[kana_id] + '</p>';
-            html += '</div>';
+            var item_view = {
+                dup: function() {
+                    return hs[kana_id][0] == '(';
+                },
+                hiragana: hs[kana_id],
+                katakana: ks[kana_id],
+                latin: ls[kana_id]
+            };
+            html += Mustache.render('<div class="kana-item{{#dup}} dup{{/dup}}">\
+                <p class="kana-char">{{ hiragana }}</p>\
+                <p class="kana-char">{{ katakana }}</p>\
+                <p class="kana-alpha">{{ latin }}</p>\
+            </div>', item_view);
         }
         html += '</div>';
     }
