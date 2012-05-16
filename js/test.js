@@ -79,6 +79,9 @@ $(document).ready(function() {
 
         var used_id = [kana_id];
         var option_range = get_section_range_by_id(kana_id);
+        if (option_range.end > kana_range - 1) {
+            option_range.end = kana_range - 1;
+        }
         for (var i = 0; i <= 3; i++) {
             if (i == which_right) {
                 continue;
