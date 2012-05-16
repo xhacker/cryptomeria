@@ -57,13 +57,14 @@ $(document).ready(function() {
             prev_hork = hork;
         }
 
+        var toguess_char;
         if (localStorage.pref_direction == "kanalatin") {
-            ch = (hork == "h") ? hs[kana_id] : ks[kana_id];
+            toguess_char = (hork == "h") ? hs[kana_id] : ks[kana_id];
         }
         else {
-            ch = ls[kana_id];
+            toguess_char = ls[kana_id];
         }
-        $("#kana").html(ch);
+        $("#kana").html(toguess_char);
 
         // place options
         var which_right = randint(0, 3);
@@ -77,14 +78,18 @@ $(document).ready(function() {
         $($("#select button")[which_right]).html(right_char);
 
         var used_id = [kana_id];
+        var option_range = get_section_range_by_id(kana_id);
         for (var i = 0; i <= 3; i++) {
             if (i == which_right) {
                 continue;
             }
-            var rand_id = randint(0, kana_range - 1);
-            while (used_id.indexOf(rand_id) >= 0 || !ls[rand_id] || ls[rand_id][0] == '(') {
-                rand_id = randint(0, kana_range - 1);
+            
+            var rand_id;
+            do {
+                rand_id = randint(option_range.start, option_range.end);
             }
+            while (used_id.indexOf(rand_id) >= 0 || !ls[rand_id] || ls[rand_id][0] == '(');
+            
             used_id.push(rand_id);
             if (localStorage.pref_direction == "kanalatin") {
                 option_char = ls[rand_id];

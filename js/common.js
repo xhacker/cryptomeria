@@ -1,7 +1,22 @@
 total_line = 26;
+section = [0, 11, 16, 26];
 basic_line = [0, 10]; // including n/m
 dakuten_line = [11, 15]; // including handakuten
 youon_line = [16, 25];
+
+function get_section_range_by_id(id) {
+    var range = {
+        "start": 0,
+        "end": 0
+    }
+    for (var i in section) {
+        if (id < section[parseInt(i) + 1] * 5) {
+            range.start = section[i] * 5;
+            range.end = section[parseInt(i) + 1] * 5 - 1;
+            return range;
+        }
+    }
+}
 
 ls = [
     'a',   'i',   'u',   'e',   'o',
