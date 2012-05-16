@@ -20,9 +20,10 @@ $(document).ready(function() {
 
         id_array = new Array;
         id_pointer = 0;
-        for (var array_i = 0, kana_i = 0; kana_i < kana_range; kana_i++) {
+        for (var array_i = 0, kana_i = 0; kana_i < kana_range; kana_i += 1) {
             if (hs[kana_i] && hs[kana_i][0] != '(') {
-                id_array[array_i++] = kana_i;
+                id_array[array_i] = kana_i;
+                array_i += 1;
             }
         }
         id_array.sort(function() { return 0.5 - Math.random(); });
@@ -37,10 +38,12 @@ $(document).ready(function() {
         $("#next").html("?");
         $("#next").attr("data-state", "ask");
 
-        var kana_id = id_array[id_pointer++];
+        var kana_id = id_array[id_pointer];
+        id_pointer += 1;
         if (kana_id === undefined) {
             randomize();
-            kana_id = id_array[id_pointer++];
+            kana_id = id_array[id_pointer];
+            id_pointer += 1;
         }
 
         if (localStorage.pref_hork == "h") {
@@ -66,12 +69,12 @@ $(document).ready(function() {
         var which_right = randint(0, 3);
         $("#next").attr("data-right", which_right);
         if (localStorage.pref_direction == "kanalatin") {
-            right_ch = ls[kana_id];
+            right_char = ls[kana_id];
         }
         else {
-            right_ch = (hork == "h") ? hs[kana_id] : ks[kana_id];
+            right_char = (hork == "h") ? hs[kana_id] : ks[kana_id];
         }
-        $($("#select button")[which_right]).html(right_ch);
+        $($("#select button")[which_right]).html(right_char);
 
         var used_id = [kana_id];
         for (var i = 0; i <= 3; i++) {
@@ -84,12 +87,12 @@ $(document).ready(function() {
             }
             used_id.push(rand_id);
             if (localStorage.pref_direction == "kanalatin") {
-                option_ch = ls[rand_id];
+                option_char = ls[rand_id];
             }
             else {
-                option_ch = (hork == "h") ? hs[rand_id] : ks[rand_id];
+                option_char = (hork == "h") ? hs[rand_id] : ks[rand_id];
             }
-            $($("#select button")[i]).html(option_ch);
+            $($("#select button")[i]).html(option_char);
         }
     }
     
