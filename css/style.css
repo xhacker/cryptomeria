@@ -230,7 +230,7 @@ button.red:not(.active):not(.not-active):not(.text):hover {
   line-height: 190px;
   color: #333;
   margin: 100px 0 100px 0;
-  font-family: "Gill Sans", "Segoe UI", "Lucida Sans Unicode", Verdana, sans-serif;
+  font-family: "Gill Sans", Ubuntu, "Segoe UI", "Lucida Sans Unicode", Verdana, sans-serif;
 }
 #page-vocabulary {
   width: 540px;
