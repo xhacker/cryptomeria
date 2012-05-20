@@ -1,16 +1,68 @@
 #page-index {
-    h1 span[lang=en] {
+    h1 .sub {
         font-family: @UITitleFontFamily;
         font-weight: 300;
         color: #666;
         font-size: 22px;
     }
     
-    h1 span[lang=ja] {
-        font-family: @JapaneseTitleFontFamily;
+    h1 .main {
+        font-family: @UITitleFontFamily;
         font-weight: 400;
         color: #222;
         font-size: 44px;
         line-height: 80px;
+    }
+    
+    h2 {
+        font-family: @UITitleFontFamily;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 3px;
+        text-align: center;
+        font-weight: 100;
+        font-size: 16px;
+        color: #aaa;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+    }
+    
+    #achievement-hall {
+        padding: 0;
+        li {
+            float: left;
+            width: 100px;
+            height: 115px;
+            margin: 5px 0 0 11px;
+            list-style: none;
+            
+            .icon {
+                width: 80px;
+                height: 80px;
+                margin: auto;
+            }
+            
+            p {
+                margin: 0;
+                &.info {
+                    display: none;
+                    color: #777;
+                    font-size: 9px;
+                    line-height: 13px;
+                }
+                &.title {
+                    font-size: 11px;
+                    color: #aaa;
+                }
+            }
+            
+            &:hover {
+                p.info {
+                    display: block;
+                }
+                p.title {
+                    display: none;
+                }
+            }
+        }
     }
 }

@@ -15,6 +15,28 @@ body {
   background-color: #fff;
   padding: 20px;
 }
+#achievement {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  top: 30px;
+  opacity: 0;
+  cursor: pointer;
+}
+#achievement.rotate {
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: scale(1) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(360deg);
+  }
+}
 .clearfix:after {
   content: ".";
   display: block;
@@ -143,18 +165,63 @@ button.red:not(.active):not(.not-active):not(.text):hover {
   padding: 3px 9px;
   cursor: auto !important;
 }
-#page-index h1 span[lang=en] {
-  font-family: "Myriad Pro", "Segoe UI", sans-serif;
+#page-index h1 .sub {
+  font-family: "Myriad Pro", Ubuntu, "Segoe UI", sans-serif;
   font-weight: 300;
   color: #666;
   font-size: 22px;
 }
-#page-index h1 span[lang=ja] {
-  font-family: "M+ 1c", "Hiragino Kaku Gothic ProN", "Kochi Gothic", Meiryo, "MS Gothic", sans-serif;
+#page-index h1 .main {
+  font-family: "Myriad Pro", Ubuntu, "Segoe UI", sans-serif;
   font-weight: 400;
   color: #222;
   font-size: 44px;
   line-height: 80px;
+}
+#page-index h2 {
+  font-family: "Myriad Pro", Ubuntu, "Segoe UI", sans-serif;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 3px;
+  text-align: center;
+  font-weight: 100;
+  font-size: 16px;
+  color: #aaa;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+#page-index #achievement-hall {
+  padding: 0;
+}
+#page-index #achievement-hall li {
+  float: left;
+  width: 100px;
+  height: 115px;
+  margin: 5px 0 0 11px;
+  list-style: none;
+}
+#page-index #achievement-hall li .icon {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+#page-index #achievement-hall li p {
+  margin: 0;
+}
+#page-index #achievement-hall li p.info {
+  display: none;
+  color: #777;
+  font-size: 9px;
+  line-height: 13px;
+}
+#page-index #achievement-hall li p.title {
+  font-size: 11px;
+  color: #aaa;
+}
+#page-index #achievement-hall li:hover p.info {
+  display: block;
+}
+#page-index #achievement-hall li:hover p.title {
+  display: none;
 }
 #page-chart .kana-row {
   border-top: 1px solid #ccc;

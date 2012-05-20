@@ -16,6 +16,27 @@ body {
     padding: 20px;
 }
 
+#achievement {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top: 30px;
+    opacity: 0;
+    cursor: pointer;
+    
+    &.rotate {
+        -webkit-animation-name: rotate;
+        -webkit-animation-duration: 0.3s;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-timing-function: linear;
+    }
+}
+
+@-webkit-keyframes rotate { 
+  0% { -webkit-transform: scale(1) rotate(0deg); }
+  100% {-webkit-transform: scale(1) rotate(360deg); }
+}
+
 .clearfix:after {
     content: ".";
     display: block;
