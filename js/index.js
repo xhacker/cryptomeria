@@ -2,7 +2,7 @@ $(document).ready(function() {
     $("#achievement").css({
         "background": "url('../img/achievements.svg') -240px 0px"
     });
-    show($("#achievement")[0]);
+    //show($("#achievement")[0]);
 
     // $("#achievement").hover(function() {
     //     $(this).animate({
