@@ -1,6 +1,7 @@
 {
   "name": "Cryptomeria",
   "version": "0.6",
+  "manifest_version": 2,
 
   "description": "Learn Japanese Kana.",
   "icons": {
@@ -16,5 +17,6 @@
     }
   },
 
+  "offline_enabled": true,
   "minimum_chrome_version": "16"
 }
