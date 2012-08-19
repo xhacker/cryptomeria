@@ -191,7 +191,23 @@ button.red:not(.active):not(.not-active):not(.text):hover {
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
+#page-index #content {
+  box-shadow: 2px 2px 0 #ddd;
+}
+#page-index .hero {
+  font-family: "Hiragino Mincho ProN", "Kochi Mincho", "MS Mincho", serif;
+  font-size: 220px;
+  line-height: 220px;
+  height: 160px;
+  overflow: hidden;
+  margin: -20px auto -23px 0;
+  text-shadow: -2px -2px 0 #dddddd;
+  color: #eee;
+  font-weight: bold;
+  text-align: center;
+}
 #page-index #achievement-hall {
+  display: none;
   padding: 0;
 }
 #page-index #achievement-hall li {
