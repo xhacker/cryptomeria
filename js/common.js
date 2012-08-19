@@ -304,12 +304,6 @@ vs = [
         {"kana":"あらわす", "meaning":"represent"},
         {"kana":"わふく", "meaning":"Japanese clothes"},
         {"kana":"さわる", "meaning":"touch"}
-    ],
-    [
-        // n/m
-        {"kana":"みあお", "meaning":"miao"},
-        {"kana":"みあお", "meaning":"miao"},
-        {"kana":"みあお", "meaning":"miao"}
     ]
 ];
 

@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var html = "";
-    for (var i = 0; i < 11; i++) {
+    for (var i = 0; i < 10; i++) {
         html += '<div class="vocabulary-row clearfix" id="' + ls[i * 5] + '">';
         
         html += '<div class="title">';

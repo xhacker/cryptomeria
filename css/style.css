@@ -166,23 +166,25 @@ button.red:not(.active):not(.not-active):not(.text):hover {
   cursor: auto !important;
 }
 #page-index h1 .sub {
-  font-family: "Myriad Pro", Ubuntu, "Segoe UI", sans-serif;
-  font-weight: 300;
-  color: #666;
-  font-size: 22px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #888;
+  font-size: 20px;
+  margin: 36px auto 5px auto;
 }
 #page-index h1 .main {
-  font-family: "Myriad Pro", Ubuntu, "Segoe UI", sans-serif;
-  font-weight: 400;
+  font-family: "Myriad Pro", "Segoe UI", AvenirNext-Medium, "Gill Sans", Ubuntu, sans-serif;
+  font-weight: normal;
   color: #222;
   font-size: 44px;
-  line-height: 80px;
+  margin: 5px auto 42px auto;
 }
 #page-index h2 {
-  font-family: "Myriad Pro", Ubuntu, "Segoe UI", sans-serif;
+  font-family: "Myriad Pro", "Segoe UI", AvenirNext-Medium, "Gill Sans", Ubuntu, sans-serif;
   border-bottom: 1px solid #ccc;
   padding-bottom: 3px;
   text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
   font-size: 16px;
   color: #aaa;
@@ -309,7 +311,7 @@ button.red:not(.active):not(.not-active):not(.text):hover {
   text-align: center;
 }
 #page-vocabulary #link a {
-  margin: 0 2px;
+  margin: 0 8px;
   color: #666;
 }
 #page-vocabulary #link a:hover {
