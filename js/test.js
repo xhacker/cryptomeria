@@ -86,13 +86,13 @@ $(document).ready(function() {
             if (i == which_right) {
                 continue;
             }
-            
+
             var rand_id;
             do {
                 rand_id = randint(option_range.start, option_range.end);
             }
             while (used_id.indexOf(rand_id) >= 0 || !ls[rand_id] || ls[rand_id][0] == '(');
-            
+
             used_id.push(rand_id);
             if (localStorage.pref_direction == "kanalatin") {
                 option_char = ls[rand_id];
@@ -103,7 +103,7 @@ $(document).ready(function() {
             $($("#select button")[i]).html(option_char);
         }
     }
-    
+
     function on_range_update() {
         var range = parseInt(localStorage.pref_range);
         var range_text = 'あ-' + hs[(range - 1) * 5];
@@ -133,7 +133,7 @@ $(document).ready(function() {
         randomize();
         get_next();
     }
-    
+
     function reset_counter() {
         $("#counter-ac").html("0");
         $("#counter-total").html("0");
@@ -154,6 +154,14 @@ $(document).ready(function() {
             get_next();
         }
     });
+
+    document.onkeydown = function(key) {
+        // key 1 is 49, so number is between 0 and 4
+        var number = key.which - 49;
+        if (number >= 0 && number <= 4) {
+            $($("#select button")[number]).click();
+        }
+    }
 
     $(".option").click(function() {
         $("#counter").show();
@@ -178,7 +186,7 @@ $(document).ready(function() {
             $($("#select button")[which_right]).addClass("green");
         }
     });
-    
+
     $("#pref-range-decrease").click(function() {
         if (parseInt(localStorage.pref_range) <= 1) {
             return;
@@ -193,7 +201,7 @@ $(document).ready(function() {
         localStorage.pref_range = parseInt(localStorage.pref_range) + 1;
         on_range_update();
     });
-    
+
     // `hork` means `hiragana or katakana`.
     $("#pref-hork button").click(function() {
         localStorage.pref_hork = $(this).attr("data-hork");
@@ -204,6 +212,6 @@ $(document).ready(function() {
         localStorage.pref_direction = $(this).attr("data-direction");
         on_direction_update();
     });
-    
+
     get_next();
 });
