@@ -1,6 +1,7 @@
 {
-  "name": "Cryptomeria",
-  "version": "1.0",
+  "name": "Cryptomeria - Learn Japanese Kana",
+  "short_name": "Cryptomeria",
+  "version": "1.0.1",
   "manifest_version": 2,
 
   "description": "Learn Japanese Kana.",
