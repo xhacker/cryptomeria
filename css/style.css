@@ -6,7 +6,7 @@ body {
   width: 500px;
   padding: 20px;
   margin: auto;
-  font-family: "Lucida Grande", "Lucida Sans Unicode", Ubuntu, "DejaVu Sans", Verdana, "Hiragino Kaku Gothic ProN", "Kochi Gothic", Meiryo, "MS Gothic" sans-serif;
+  font-family: "SF UI Text", "Lucida Grande", "Lucida Sans Unicode", Ubuntu, "DejaVu Sans", Verdana, "Hiragino Kaku Gothic ProN", "Kochi Gothic", Meiryo, "MS Gothic", sans-serif;
 }
 #content {
   border: 1px solid #ddd;
@@ -57,9 +57,8 @@ button {
   border-right: 1px solid #a3a3a3;
   border-bottom: 1px solid #999999;
   border-left: 1px solid #a3a3a3;
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 2px 2px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 1px 1px 0 rgba(0, 0, 0, 0.4);
   /*#b3b3b3*/
-
   text-shadow: 0 0px 1px rgba(0, 0, 0, 0.7);
   color: #fff;
   padding: 7px 15px;
@@ -67,7 +66,8 @@ button {
   border-radius: 4px;
   position: relative;
   cursor: pointer;
-  font-family: "Lucida Grande", "Lucida Sans Unicode", Ubuntu, "DejaVu Sans", Verdana, "Hiragino Kaku Gothic ProN", "Kochi Gothic", Meiryo, "MS Gothic" sans-serif;
+  font-family: "SF UI Text", "Lucida Grande", "Lucida Sans Unicode", Ubuntu, "DejaVu Sans", Verdana, "Hiragino Kaku Gothic ProN", "Kochi Gothic", Meiryo, "MS Gothic", sans-serif;
+  outline: none;
 }
 button:active {
   top: 1px;
@@ -128,10 +128,10 @@ button.red:not(.active):not(.not-active):not(.text):hover {
   font-weight: bold;
 }
 .control.not-active {
-  color: #e0e0e0;
+  color: rgba(255, 255, 255, 0.85);
 }
 .control.not-active:hover {
-  color: #f6f6f6;
+  color: #fff;
 }
 #select button {
   min-width: 70px;
@@ -201,7 +201,7 @@ button.red:not(.active):not(.not-active):not(.text):hover {
   height: 160px;
   overflow: hidden;
   margin: -20px auto -23px 0;
-  text-shadow: -2px -2px 0 #dddddd;
+  text-shadow: -2px -2px 0 #ddd;
   color: #eee;
   font-weight: bold;
   text-align: center;
